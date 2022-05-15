@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+@use "../../foundation/base";
+
+/*------------------------------
+component > _background.scss
+------------------------------*/
+
+/*----- メインビジュアル -----*/
+.c-main-visual__background-img {
+    background-image: url("../../mainvisual-img/mainvisual-sp@2x.jpg");
+    width: 100%;
+    height: 285px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.c-contents--item__background {
+    background-color: base.$background-text;
+}
+
+/*----- サイドバー背景 -----*/
+.p-sidebar {
+    background-color: base.$background-sidebar;
+}
+
+/*----- content-item背景 -----*/
+.c-content-items__background-color {
+    background-color: rgba(255,255,255,0.6);
+    width: 305px;
+    height: auto;
+    text-align: left;
+    flex-wrap: wrap;
+    margin: 0 auto 13px auto ;
+    padding: 1rem;
+}
+
+/*----- 地図背景 -----*/
+.p-access-text__background-color {
+    background-color: rgba(0,0,0,0.29);
+    width: 100%;
+    height: auto;
+    text-align: left;
+    flex-wrap: wrap;
+    margin: 0 auto 13px auto ;
+    padding: 1rem;
+}

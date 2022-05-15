@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+@use "../../foundation/base";
+
+.p-branch-menu__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.p-branch-menu__TakeOut {
+    background-image: url("../../mainvisual-img/takeout.png");
+    width: 100%;
+    height: 100%;
+    max-height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-position: center;
+}
+
+.p-branch-menu__items {
+    margin-top: 100px;
+    align-items: flex-end;
+    margin-bottom: 15px;
+}
+
+.p-branch-menu__EatIn {
+    background-image: url("../../mainvisual-img/eatin.png");
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    max-height: auto;
+    object-fit: cover;
+    margin-bottom: 50px;
+    
+}

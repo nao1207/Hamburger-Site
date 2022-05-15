@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+@use "../../foundation/base";
+
+.c-button__sidebar {
+    color: base.$title-sidebar;
+    font-size: 1.25rem;
+    padding-top: 14px;
+    margin-left: 83%;
+    cursor: pointer;
+}

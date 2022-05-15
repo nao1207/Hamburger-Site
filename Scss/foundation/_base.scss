@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+body {
+    max-width: 375px;
+    width: 100%;
+    font-family: 'M PLUS 1', sans-serif;
+    font-family: 'Philosopher', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+/*------------------------------
+色変数
+------------------------------*/
+/*-----背景色-----*/
+$background-header:             #FFF7EF;
+$background-sidebar:            #F2EDE9;
+$background-text: rgba(255,255,255,0.8);
+$background-blockquote:         #F5F5F5;
+
+/*-----タイトル-----*/
+$title-site:    #707070;
+$title-sidebar: #707070;
+$title-contents:   #fff;
+$title-item:    #3C2A10;
+
+/*-----テキスト-----*/
+$text-contents:       #fff;
+$text-footer:         #fff;
+$text-item:        #3C2A10;
+$text-sidebar:     #707070;
+$text-card-button: #707070;
+$text-search:      #707070;
+
+/*-----ボタン-----*/
+$button-card-background:    #fff;
+$button-menu-background: #F2EDE9;
+$button-border:          #707070;
+
+/*------------------------------
+レスポンシブ数値
+------------------------------*/
+@mixin iPhone {
+    @media (max-width: 375px){
+        @content;
+    }
+}
+
+@mixin iPad {
+    @media (min-width: 600px){
+        @content;
+    }
+}
+
+@mixin PC {
+    @media (min-width: 1025px){
+        @content;
+    }
+}

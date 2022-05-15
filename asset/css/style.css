@@ -1,0 +1,385 @@
+@charset "UTF-8";
+body {
+  max-width: 375px;
+  width: 100%;
+  font-family: "M PLUS 1", sans-serif;
+  font-family: "Philosopher", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+/*------------------------------
+色変数
+------------------------------*/
+/*-----背景色-----*/
+/*-----タイトル-----*/
+/*-----テキスト-----*/
+/*-----ボタン-----*/
+/*------------------------------
+レスポンシブ数値
+------------------------------*/
+.l-header {
+  background-color: #FFF7EF;
+  height: 217px;
+}
+
+main {
+  display: flex;
+}
+
+.l-footer {
+  text-align: center;
+  color: #fff;
+  height: 150px;
+  background-image: url("../../mainvisual-img/footer.png");
+}
+
+address {
+  font-size: 0.875rem;
+  font-weight: 100;
+  padding-bottom: 40px;
+}
+
+.c-button__sidebar {
+  color: #707070;
+  font-size: 1.25rem;
+  padding-top: 14px;
+  margin-left: 83%;
+  cursor: pointer;
+}
+
+/*------------------------------
+component > _title.scss
+------------------------------*/
+/*サイトタイトル*/
+h1.c-site-title {
+  color: #707070;
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+/*サイドバータイトル*/
+h2.c-title__sidebar {
+  font-size: 1.25rem;
+  color: #707070;
+  font-weight: bold;
+}
+
+/*各ページのトップ画像のタイトル*/
+h2.c-main-visual__title {
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: bold;
+  padding-left: 1rem;
+}
+
+.c-title {
+  color: #fff;
+}
+
+h2.c-title--underline {
+  color: #fff;
+  font-size: 2.5625rem;
+  text-align: left;
+  left: 30px;
+  top: 30px;
+  position: relative;
+  display: inline-block;
+}
+h2.c-title--underline::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  background-color: #fff;
+  bottom: -12px;
+  /*線の上下位置*/
+  width: 35px;
+  /*線の長さ*/
+  height: 4px;
+  /*線の太さ*/
+}
+
+h2.c-title--underline__access {
+  color: #fff;
+  font-size: 1.875rem;
+  font-weight: bold;
+  text-align: left;
+  left: 15px;
+  top: 15px;
+  position: relative;
+  display: inline-block;
+}
+h2.c-title--underline__access::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  background-color: #fff;
+  bottom: -12px;
+  /*線の上下位置*/
+  width: 70px;
+  /*線の長さ*/
+  height: 2px;
+  /*線の太さ*/
+}
+
+h3.c-title {
+  color: #3C2A10;
+  font-size: 1.375rem;
+}
+
+/*----- menuタイトル -----*/
+.c-title__sidebar {
+  font-size: 1.25rem;
+  margin-left: 45px;
+  margin-bottom: 80px;
+}
+
+/*------------------------------
+object > component > text
+------------------------------*/
+/*-----フロントページテキスト-----*/
+.c-contents-item__text {
+  color: #3C2A10;
+  font-size: 1rem;
+  font-weight: regular;
+  display: inline-block;
+}
+
+/*-----地図テキスト-----*/
+.p-access__text p {
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin-top: 40px;
+  line-height: 33px;
+  padding: 1.5rem;
+}
+
+/*-----サイドバーテキスト-----*/
+article.sidebar ul {
+  color: #707070;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+article.sidebar li {
+  color: #707070;
+  font-size: 1.25rem;
+  font-weight: regular;
+}
+
+/*-----footerテキスト-----*/
+footer p {
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+footer p .copy {
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+/*------------------------------
+component > _background.scss
+------------------------------*/
+/*----- メインビジュアル -----*/
+.c-main-visual__background-img {
+  background-image: url("../../mainvisual-img/mainvisual-sp@2x.jpg");
+  width: 100%;
+  height: 285px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.c-contents--item__background {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/*----- サイドバー背景 -----*/
+.p-sidebar {
+  background-color: #F2EDE9;
+}
+
+/*----- content-item背景 -----*/
+.c-content-items__background-color {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 305px;
+  height: auto;
+  text-align: left;
+  flex-wrap: wrap;
+  margin: 0 auto 13px auto;
+  padding: 1rem;
+}
+
+/*----- 地図背景 -----*/
+.p-access-text__background-color {
+  background-color: rgba(0, 0, 0, 0.29);
+  width: 100%;
+  height: auto;
+  text-align: left;
+  flex-wrap: wrap;
+  margin: 0 auto 13px auto;
+  padding: 1rem;
+}
+
+.p-search-form {
+  display: inline-block;
+  position: relative;
+}
+
+/*検索バー*/
+.p-search-box {
+  width: 230px;
+  height: 46px;
+  margin-right: 12px;
+  border-radius: 8px;
+  border: solid 1px;
+  color: #707070;
+  background-color: #fff;
+}
+
+.p-search-form::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  font-weight: 100;
+  background: url(../../img/search.png);
+  display: inline-block;
+  position: absolute;
+  top: 11px;
+  left: 16px;
+}
+
+.p-button__search {
+  width: 78px;
+  height: 46px;
+  border-radius: 10px;
+  border: solid 1px #707070;
+  color: #707070;
+  font-weight: bold;
+  background-color: #F2EDE9;
+}
+
+.p-branch-menu__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.p-branch-menu__TakeOut {
+  background-image: url("../../mainvisual-img/takeout.png");
+  width: 100%;
+  height: 100%;
+  max-height: auto;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-position: center;
+}
+
+.p-branch-menu__items {
+  margin-top: 100px;
+  align-items: flex-end;
+  margin-bottom: 15px;
+}
+
+.p-branch-menu__EatIn {
+  background-image: url("../../mainvisual-img/eatin.png");
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  max-height: auto;
+  object-fit: cover;
+  margin-bottom: 50px;
+}
+
+.p-take-out__item {
+  text-align: left;
+}
+
+.p-footer__menu {
+  display: flex;
+  justify-content: center;
+  line-height: 29px;
+  padding: 40px;
+}
+.p-footer__menu li {
+  font-size: 1.25rem;
+  font-weight: 100;
+}
+.p-footer__menu > li:first-child {
+  position: relative;
+  display: inline-block;
+}
+.p-footer__menu > li:first-child::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  background-color: #fff;
+  width: 1.5px;
+  height: 1.25rem;
+  right: -0.625rem;
+  top: 6px;
+}
+.p-footer__menu > li:last-child {
+  padding-left: 1.1rem;
+}
+
+.p-sidebar {
+  position: absolute;
+  left: 375px;
+  top: 0%;
+  height: auto;
+}
+
+.p-sidebar__title {
+  color: #707070;
+  font-size: 1.5rem;
+  margin-bottom: 39px;
+  margin-left: 46px;
+  margin-top: 38px;
+}
+
+.p-sidebar__text {
+  margin-right: 84px;
+}
+
+.p-sidebar__text {
+  color: #707070;
+  font-size: 1.25rem;
+  margin-bottom: 23px;
+  margin-left: 65px;
+}
+
+.p-header-items {
+  text-align: center;
+}
+
+.p-access .p-map > img {
+  height: 691px;
+  width: 375px;
+  object-fit: cover;
+  position: absolute;
+}
+
+.p-access .p-access__text {
+  width: 375px;
+  height: auto;
+  position: relative;
+}
+
+/*------------------------------
+display.scss
+------------------------------*/
+.u-main-visual > img {
+  position: relative;
+}
+
+/*object*/
+
+/*# sourceMappingURL=style.css.map */

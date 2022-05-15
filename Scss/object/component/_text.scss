@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+@use "../../foundation/base";
+/*------------------------------
+object > component > text
+------------------------------*/
+
+/*-----フロントページテキスト-----*/
+.c-contents-item__text {
+    color: base.$text-item;
+    font-size: 1rem;
+    font-weight: regular;
+    display: inline-block;
+}
+
+/*-----地図テキスト-----*/
+.p-access__text p {
+    color: base.$text-contents;
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-top: 40px;
+    line-height: 33px;
+    padding: 1.5rem;
+}
+
+/*-----サイドバーテキスト-----*/
+article.sidebar ul {
+    color: base.$text-sidebar;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+article.sidebar li {
+    color: base.$text-sidebar;
+    font-size: 1.25rem;
+    font-weight: regular;
+}
+
+/*-----footerテキスト-----*/
+footer p {
+    color: base.$text-contents;
+    font-size: 1.25rem;
+}
+footer p .copy {
+    color: base.$text-contents;
+    font-size: 0.875rem;
+}

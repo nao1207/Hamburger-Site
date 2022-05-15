@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+@use "../../foundation/base";
+
+/*------------------------------
+component > _title.scss
+------------------------------*/
+
+/*サイトタイトル*/
+h1.c-site-title {
+    color: base.$title-site;
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+/*サイドバータイトル*/
+h2.c-title__sidebar {
+    font-size: 1.25rem;
+    color: base.$title-sidebar;
+    font-weight: bold;
+}
+
+/*各ページのトップ画像のタイトル*/
+h2.c-main-visual__title {
+    color: base.$title-contents;
+    font-size: 2.25rem;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+.c-title {
+    color: base.$title-contents;
+}
+
+h2.c-title--underline {
+    color: base.$title-contents;
+    font-size: 2.5625rem;
+    text-align: left;
+    left: 30px;
+    top: 30px;
+    position: relative;
+    display: inline-block;
+    &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        background-color: base.$title-contents;
+        bottom: -12px;/*線の上下位置*/
+        width: 35px;/*線の長さ*/
+        height: 4px;/*線の太さ*/
+        //transform: translateX(-50%);/*位置調整*/
+    }
+}
+
+h2.c-title--underline__access {
+    color: base.$title-contents;
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-align: left;
+    left: 15px;
+    top: 15px;
+    position: relative;
+    display: inline-block;
+    &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        background-color: base.$title-contents;
+        bottom: -12px;/*線の上下位置*/
+        width: 70px;/*線の長さ*/
+        height: 2px;/*線の太さ*/
+        //transform: translateX(-50%);/*位置調整*/
+    }
+}
+
+h3.c-title {
+    color: base.$title-item;
+    font-size: 1.375rem;
+}
+
+/*----- menuタイトル -----*/
+.c-title__sidebar {
+    font-size: 1.25rem;
+    margin-left: 45px;
+    margin-bottom: 80px;
+}
