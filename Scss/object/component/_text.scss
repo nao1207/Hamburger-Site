@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
-@use "../../foundation/base";
+@use "../../foundation/variable" as *;
 /*------------------------------
 object > component > text
 ------------------------------*/
 
 /*-----フロントページテキスト-----*/
 .c-contents-item__text {
-    color: base.$text-item;
+    color: $text-item;
     font-size: 1rem;
     font-weight: regular;
     display: inline-block;
@@ -15,7 +15,7 @@ object > component > text
 
 /*-----地図テキスト-----*/
 .p-access__text p {
-    color: base.$text-contents;
+    color: $text-contents;
     font-size: 0.875rem;
     font-weight: bold;
     margin-top: 40px;
@@ -25,22 +25,22 @@ object > component > text
 
 /*-----サイドバーテキスト-----*/
 article.sidebar ul {
-    color: base.$text-sidebar;
+    color: $text-sidebar;
     font-size: 1.5rem;
     font-weight: bold;
 }
 article.sidebar li {
-    color: base.$text-sidebar;
+    color: $text-sidebar;
     font-size: 1.25rem;
     font-weight: regular;
 }
 
 /*-----footerテキスト-----*/
 footer p {
-    color: base.$text-contents;
+    color: $text-contents;
     font-size: 1.25rem;
 }
 footer p .copy {
-    color: base.$text-contents;
+    color: $text-contents;
     font-size: 0.875rem;
 }

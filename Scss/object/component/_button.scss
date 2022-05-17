@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
-@use "../../foundation/base";
+@use "../../foundation/variable" as *;
 
-.c-button__sidebar {
-    color: base.$title-sidebar;
+.c-sidebar__button {
+    color: $title-sidebar;
     font-size: 1.25rem;
     padding-top: 14px;
     margin-left: 83%;

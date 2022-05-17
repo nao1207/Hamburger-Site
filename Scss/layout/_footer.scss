@@ -1,12 +1,44 @@
 @charset "UTF-8";
 
-@use "../foundation/base";
+@use "../foundation/variable" as *;
 
 .l-footer {
     text-align: center;
-    color: base.$text-footer;
+    color: $text-footer;
     height: 150px;
     background-image: url("../../mainvisual-img/footer.png");
+
+    &__menu {
+        display: flex;
+    justify-content: center;
+    line-height: 29px;
+    padding: 40px;
+
+    li {
+    font-size: 1.25rem;
+    font-weight: 100;
+    }
+
+    & > li:first-child {
+        position: relative;
+        display: inline-block;
+        &::after {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            background-color: $text-footer;
+            width: 1.5px;
+            height: 1.25rem;
+            right: -0.625rem;
+            top: 6px;
+        }
+    }
+
+    & > li:last-child {
+        padding-left: 1.1rem;
+    }
+    
+    }
 }
 
 address {

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@use "../../foundation/base";
+@use "../../foundation/variable" as *;
 
 .p-branch-menu__content {
     display: flex;
@@ -8,23 +8,37 @@
     justify-content: center;
 }
 
-.p-branch-menu__TakeOut {
+.p-branch-menu__takeout {
     background-image: url("../../mainvisual-img/takeout.png");
     width: 100%;
-    height: 100%;
     max-height: auto;
-    overflow: hidden;
+    //overflow: hidden;
     margin-bottom: 20px;
     background-position: center;
+    background-size:cover;
 }
 
-.p-branch-menu__items {
-    margin-top: 100px;
-    align-items: flex-end;
+.p-branch-menu__content {
+    margin-top: 50%;
+}
+.p-takeout__items {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    background-color: $background-text;
     margin-bottom: 15px;
+    max-width: 90%;
+    height: auto;
+    align-items: flex-end;
+    text-align: center;
+    padding: 1rem;
+    text-align: left;
+    &__item {
+        flex-wrap: wrap;
+    }
 }
 
-.p-branch-menu__EatIn {
+.p-branch-menu__eatin {
     background-image: url("../../mainvisual-img/eatin.png");
     background-position: center;
     width: 100%;

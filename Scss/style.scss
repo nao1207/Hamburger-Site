@@ -1,9 +1,42 @@
 @charset "UTF-8";
 
-@use "foundation";
-@use "layout";
+/*------------------------------
+foundation
+------------------------------*/
+@use "foundation/base";
+@use "foundation/reset";
+@use "foundation/variable";
 
-/*object*/
-@use "object/component";
-@use "object/project";
-@use "object/utility";
+/*------------------------------
+layout
+------------------------------*/
+@use "layout/footer";
+@use "layout/header";
+@use "layout/sidebar";
+
+/*------------------------------
+object
+------------------------------*/
+/*---------------
+component
+---------------*/
+@use "object/component/background";
+@use "object/component/button";
+@use "object/component/dialog";
+@use "object/component/inner";
+@use "object/component/text";
+@use "object/component/title";
+
+/*---------------
+project
+---------------*/
+@use "object/project/access";
+@use "object/project/articles";
+@use "object/project/branch-menu";
+@use "object/project/gallery";
+@use "object/project/main";
+@use "object/project/search";
+
+/*---------------
+utility
+---------------*/

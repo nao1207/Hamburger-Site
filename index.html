@@ -4,61 +4,67 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- style.css -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-        <!-- jQuery -->
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <title>Hamburger</title>
     </head>
     <body>
         <header class="l-header">
-            <h2 class="c-button__sidebar">Menu</h2>
-            <div class="p-header__section">
-                <h1 class="c-site__title">Hamburger</h1>
-                <form action="" class="p-search__form">
-                <input type="text" class="p-search__box">
-                <input type="submit" name="submit" class="p-search__button" value="検索">
-                </form>
-            </div>
+            <div class="c-inner">
+                <h2 class="c-sidebar__button">Menu</h2>
+                <div class="l-header__section">
+                    <h1 class="c-site__title">Hamburger</h1>
+                    <form action="" class="p-search__form">
+                    <input type="text" class="p-search__box">
+                    <input type="submit" name="submit" class="p-search__button" value="検索">
+                    </form>
+                </div>
+            </div><!--.c-inner-->
         </header>
 
         <main>
             <div class="p-main-visual">
                 <h2 class="p-main-visual__title">ダミーサイト</h2>
             </div><!--.c-main-visual-->
-            <section class="p-branch-menu">
-                <ul class="p-branch-menu__content">
-                    <li class="p-takeout"><!--画像挿入中-->
-                        <h2 class="c-content__title--underline">Take out</h2>
-                        <dl class="p-takeout__items">
-                            <dt>
-                                <h3 class="c-items__title">Take Out</h3>
-                            </dt>
-                            <dd>
-                                当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
-                                で利用できる商品を掲載しています当店のテイクアウトで利用できる商品を
-                                掲載しています当店のテイクアウトで利用できる商品を掲載しています当店
-                                のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで
-                            </dd>
-                        </dl>
-                        <dl class="p-takeout__items">
-                            <dt>
-                                <h3 class="c-items__title">Take Out</h3>
-                            </dt>
-                            <dd>
-                                当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
-                                で利用できる商品を掲載しています当店のテイクアウトで利用できる商品を
-                                掲載しています当店のテイクアウトで利用できる商品を掲載しています当店
-                                のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで
-                            </dd>
-                        </dl>
+            <section class="p-branch-menu c-section">
+                <ul class="p-branch-menu__lists">
+                    <li class="p-branch-menu__takeout"><!--画像挿入中-->
+                        <h2 class="c-title--underline">
+                            Take Out
+                        </h2>
+                        <div class="p-branch-menu__content">
+                            <dl class="p-takeout__items">
+                                <dt>
+                                    <h3 class="c-items__title">Take Out</h3>
+                                </dt>
+                                <dd class="p-takeout__item">
+                                    当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
+                                    で利用できる商品を掲載しています当店のテイクアウトで利用できる商品を
+                                    掲載しています当店のテイクアウトで利用できる商品を掲載しています当店
+                                    のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで
+                                </dd>
+                            </dl>
+                            <dl class="p-takeout__items">
+                                <dt>
+                                    <h3 class="c-items__title">Take Out</h3>
+                                </dt>
+                                <dd>
+                                    当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
+                                    で利用できる商品を掲載しています当店のテイクアウトで利用できる商品を
+                                    掲載しています当店のテイクアウトで利用できる商品を掲載しています当店
+                                    のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで
+                                </dd>
+                            </dl>
+                        </div><!--.p-branch-menu__content-->
                     </li>
-                    <li class="p-eatin">
+                    <li class="p-branch-menu__eatin">
                         <h2 class="c-title--underline">Eat In</h2>
                         <dl class="p-eatin__items">
                             <dt>
-                                <h3 class="c-title">Eat In</h3>
+                                <h3 class="c-items__title">Eat In</h3>
                             </dt>
                             <dd>
                                 店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
@@ -66,7 +72,7 @@
                         </dl>
                         <dl class="p-eatin__items">
                             <dt>
-                                <h3 class="c-title--underline">Eat In</h3>
+                                <h3 class="c-items__title">Eat In</h3>
                             </dt>
                             <dd>
                                 店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
@@ -80,22 +86,22 @@
                 <div class="p-map">
                     <img src="../mainvisual-img/map.png" alt="地図"><!--絶対位置-->
                 </div>
-                <div class="c-text p-access__text p-access-text__background-color"><!--相対位置-->
-                    <h2 class="c-title--underline__access">見出しが入ります</h2>
+                <div class="c-text p-access__text"><!--相対位置-->
+                    <h2 class="c-title--underline">見出しが入ります</h2>
                     <p>
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                     </p>
                 </div>
             </section>
 
-            <article class="p-sidebar">
+            <article class="l-sidebar">
                     <h2 class="c-title__sidebar">Menu</h2>
-                    <ul>
-                        <h3 class="p-sidebar__title">バーガー</h3>
-                        <li class="p-sidebar__text">ハンバーガー</li>
-                        <li class="p-sidebar__text">チーズバーガー</li>
-                        <li class="p-sidebar__text">テリヤキバーガー</li>
-                        <li class="p-sidebar__text">アボカドバーガー</li>
+                    <ul class="l-sidebar__lists">
+                        <h3 class="c-items__title">バーガー</h3>
+                        <li>ハンバーガー</li>
+                        <li>チーズバーガー</li>
+                        <li>テリヤキバーガー</li>
+                        <li>アボカドバーガー</li>
                         <li class="p-sidebar__text">フィッシュバーガー</li>
                         <li class="p-sidebar__text">ベーコンバーガー</li>
                         <li class="p-sidebar__text">チキンバーガー</li>
@@ -120,7 +126,7 @@
         </main>
         
         <footer class="l-footer">
-            <ul class="p-footer__menu">
+            <ul class="l-footer__menu">
                 <li>ショップ情報</li>
                 <li>ヒストリー</li>
             </ul>

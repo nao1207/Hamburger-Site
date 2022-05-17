@@ -1,40 +1,34 @@
 @charset "UTF-8";
 
-@use "../../foundation/base";
+@use "../../foundation/variable" as *;
 
 /*------------------------------
 component > _title.scss
 ------------------------------*/
 
 /*サイトタイトル*/
-h1.c-site-title {
-    color: base.$title-site;
+.c-site__title {
+    color: $title-site;
     font-size: 2.5rem;
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 38px;
 }
 
 /*サイドバータイトル*/
-h2.c-title__sidebar {
+.c-title__sidebar {
     font-size: 1.25rem;
-    color: base.$title-sidebar;
+    color: $title-sidebar;
     font-weight: bold;
 }
 
 /*各ページのトップ画像のタイトル*/
-h2.c-main-visual__title {
-    color: base.$title-contents;
-    font-size: 2.25rem;
-    font-weight: bold;
-    padding-left: 1rem;
-}
 
 .c-title {
-    color: base.$title-contents;
+    color: $title-contents;
 }
 
-h2.c-title--underline {
-    color: base.$title-contents;
+.c-title--underline {
+    color: $title-contents;
     font-size: 2.5625rem;
     text-align: left;
     left: 30px;
@@ -46,7 +40,7 @@ h2.c-title--underline {
         position: absolute;
         display: inline-block;
         left: 0;
-        background-color: base.$title-contents;
+        background-color: $title-contents;
         bottom: -12px;/*線の上下位置*/
         width: 35px;/*線の長さ*/
         height: 4px;/*線の太さ*/
@@ -55,7 +49,7 @@ h2.c-title--underline {
 }
 
 h2.c-title--underline__access {
-    color: base.$title-contents;
+    color: $title-contents;
     font-size: 1.875rem;
     font-weight: bold;
     text-align: left;
@@ -68,7 +62,7 @@ h2.c-title--underline__access {
         position: absolute;
         display: inline-block;
         left: 0;
-        background-color: base.$title-contents;
+        background-color: $title-contents;
         bottom: -12px;/*線の上下位置*/
         width: 70px;/*線の長さ*/
         height: 2px;/*線の太さ*/
@@ -77,7 +71,7 @@ h2.c-title--underline__access {
 }
 
 h3.c-title {
-    color: base.$title-item;
+    color: $title-item;
     font-size: 1.375rem;
 }
 

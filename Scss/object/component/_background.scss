@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@use "../../foundation/base";
+@use "../../foundation/variable" as *;
 
 /*------------------------------
 component > _background.scss
@@ -17,12 +17,12 @@ component > _background.scss
 }
 
 .c-contents--item__background {
-    background-color: base.$background-text;
+    background-color: $background-text;
 }
 
 /*----- サイドバー背景 -----*/
 .p-sidebar {
-    background-color: base.$background-sidebar;
+    background-color: $background-sidebar;
 }
 
 /*----- content-item背景 -----*/
