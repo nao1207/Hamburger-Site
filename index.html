@@ -6,9 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@500&family=Philosopher&display=swap" rel="stylesheet">
         <!-- jQuery -->
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -17,26 +14,26 @@
     <body>
         <header class="l-header">
             <h2 class="c-button__sidebar">Menu</h2>
-            <div class="p-header-items">
-                <h1 class="c-site-title">Hamburger</h1>
-                <form action="" class="p-search-form">
-                <input type="text" class="p-search-box">
-                <input type="submit" name="submit" class="p-button__search" value="検索">
+            <div class="p-header__section">
+                <h1 class="c-site__title">Hamburger</h1>
+                <form action="" class="p-search__form">
+                <input type="text" class="p-search__box">
+                <input type="submit" name="submit" class="p-search__button" value="検索">
                 </form>
             </div>
         </header>
 
         <main>
-            <div class="c-main-visual__background-img">
-                <h2 class="c-main-visual__title">ダミーサイト</h2>
-            </div>
-            <div class="p-branch-menu">
+            <div class="p-main-visual">
+                <h2 class="p-main-visual__title">ダミーサイト</h2>
+            </div><!--.c-main-visual-->
+            <section class="p-branch-menu">
                 <ul class="p-branch-menu__content">
-                    <li class="p-branch-menu__TakeOut"><!--画像挿入中-->
-                        <h2 class="c-title--underline">Take out</h2>
-                        <dl class="c-content-items__background-color p-branch-menu__items">
+                    <li class="p-takeout"><!--画像挿入中-->
+                        <h2 class="c-content__title--underline">Take out</h2>
+                        <dl class="p-takeout__items">
                             <dt>
-                                <h3 class="c-title">Take Out</h3>
+                                <h3 class="c-items__title">Take Out</h3>
                             </dt>
                             <dd>
                                 当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
@@ -45,9 +42,9 @@
                                 のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで
                             </dd>
                         </dl>
-                        <dl class="c-content-items__background-color p-TakeOut__items">
+                        <dl class="p-takeout__items">
                             <dt>
-                                <h3 class="c-title">Take Out</h3>
+                                <h3 class="c-items__title">Take Out</h3>
                             </dt>
                             <dd>
                                 当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウト
@@ -57,9 +54,9 @@
                             </dd>
                         </dl>
                     </li>
-                    <li class="p-branch-menu__EatIn">
+                    <li class="p-eatin">
                         <h2 class="c-title--underline">Eat In</h2>
-                        <dl class="c-content-items__background-color p-EatIn__items">
+                        <dl class="p-eatin__items">
                             <dt>
                                 <h3 class="c-title">Eat In</h3>
                             </dt>
@@ -67,9 +64,9 @@
                                 店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
                             </dd>
                         </dl>
-                        <dl class="c-content-items__background-color p-EatIn__items">
+                        <dl class="p-eatin__items">
                             <dt>
-                                <h3 class="c-title">Eat In</h3>
+                                <h3 class="c-title--underline">Eat In</h3>
                             </dt>
                             <dd>
                                 店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
@@ -77,7 +74,7 @@
                         </dl>
                     </li>
                 </ul>
-            </div><!-- .branch-menu -->
+            </section><!-- .branch-menu -->
 
             <section class="p-access">
                 <div class="p-map">
