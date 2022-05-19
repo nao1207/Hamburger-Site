@@ -1,16 +1,28 @@
 @charset "UTF-8";
 
-@use "../../foundation/base";
+@use "../../foundation/variable" as *;
 
-.p-access .p-map > img {
-    height: 691px;
-    width: 375px;
-    object-fit: cover;
-    position: absolute;
-}
-
-.p-access .p-access__text {
-    width: 375px;
-    height: auto;
-    position: relative;
+.p-access {
+    &__map > img {
+        max-height: 691px;
+        position: absolute;
+        background-size: contain;
+    }
+    &__text {
+        width: 100%;
+        height: auto;
+        position: relative;
+        background-color: rgba(0,0,0,0.29);
+        padding: 10% 3%;
+    }
+    @include breakpoint(tablet) {
+        &__map > img {
+            max-height: 415px;
+        }
+    }
+    @include breakpoint(pc) {
+        &__map > img {
+            max-height: 649px;
+        }
+    }
 }

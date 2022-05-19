@@ -1,5 +1,5 @@
 $(function(){
-    $('.c-button__sidebar').click(function(){
-        $('.p-sidebar').ToggleClass('open');
+    $('.c-sidebar__button').click(function(){
+        $('.l-sidebar').toggleClass('open');
     });
 });

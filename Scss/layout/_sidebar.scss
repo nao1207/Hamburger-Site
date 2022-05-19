@@ -2,26 +2,27 @@
 
 .l-sidebar {
     position: absolute;
-    left: 375px;
-    top: 0%;
+    top: 0;
+    left: 5%;
     height: auto;
+    &__section {
+        position: absolute;
+        z-index: 2;
+        overflow: hidden;
+        width: 0;//0にすると表示されなくなるけど、100％でもなる
+        background-color: $background-sidebar;
+    }
 }
 
-.p-sidebar__title {
-    color: $title-sidebar;
-    font-size: 1.5rem;
-    margin-bottom: 39px;
-    margin-left: 46px;
-    margin-top: 38px;
+.l-sidebar.open {
+    .l-sidebar__section {
+        width: 340px;
+    }
 }
 
-.p-sidebar__text {
-    margin-right: 84px;
+/*nav {
+    left: 187px;
+    top: 0%;
+    width: 328px;
 }
-
-.p-sidebar__text {
-    color: $text-sidebar;
-    font-size: 1.25rem;
-    margin-bottom: 23px;
-    margin-left: 65px;
-}
+*/

@@ -48,13 +48,12 @@ component > _title.scss
     }
 }
 
-h2.c-title--underline__access {
+.c-title--underline__access {
     color: $title-contents;
     font-size: 1.875rem;
     font-weight: bold;
     text-align: left;
-    left: 15px;
-    top: 15px;
+    left: 8%;
     position: relative;
     display: inline-block;
     &::after {
@@ -70,9 +69,11 @@ h2.c-title--underline__access {
     }
 }
 
-h3.c-title {
-    color: $title-item;
+.p-sidebar-items__title {
+    color: $title-sidebar;
     font-size: 1.375rem;
+    margin-left: 45px;
+    margin-bottom: 23px;
 }
 
 /*----- menuタイトル -----*/

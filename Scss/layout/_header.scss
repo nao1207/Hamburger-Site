@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@use "../foundation/variable" as *;
 
 .l-header {
     background-color: #FFF7EF;
@@ -6,5 +6,16 @@
 
     &__section {
         text-align: center;
+    }
+
+    @include breakpoint(tablet) {
+    }
+
+    @include breakpoint(pc) {
+        &__section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 }

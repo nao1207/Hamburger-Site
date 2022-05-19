@@ -1,6 +1,9 @@
 @use "../../foundation/variable" as *;
 
 .c-inner {
-    padding: 0 16px;
-    margin: 0 auto;
+    margin: 0 16px;
+    height: 217px;
+    @include breakpoint(pc) {
+        padding: 67px 65px;
+    }
 }
