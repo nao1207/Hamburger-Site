@@ -1,0 +1,6 @@
+@use "../../foundation/variable" as *;
+
+.wrapper.open {
+    position: fixed;
+    opacity: $background-main;
+}

@@ -41,6 +41,9 @@
     }
     
     }
+    &.open {
+        position: fixed;
+    }
 }
 
 address {

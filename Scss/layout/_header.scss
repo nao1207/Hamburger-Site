@@ -18,4 +18,17 @@
             align-items: center;
         }
     }
+    @include breakpoint(pc) {
+        width: 100%;
+        max-width: 81vw;
+        object-fit: cover;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}
+
+.l-header.open {
+    position: fixed;
 }

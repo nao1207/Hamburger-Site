@@ -13,3 +13,18 @@
         display: none;
     }
 }
+
+.c-sidebar__button--close {
+    display: none;
+    &.open {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 25px;
+        right: 17px;
+        position: fixed;
+    }
+    @include breakpoint(pc) {
+        display: none;
+    }
+}

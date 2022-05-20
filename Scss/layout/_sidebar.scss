@@ -3,26 +3,40 @@
 .l-sidebar {
     position: absolute;
     top: 0;
-    left: 5%;
-    height: auto;
+    right: 0;
     &__section {
         position: absolute;
         z-index: 2;
         overflow: hidden;
-        width: 0;//0にすると表示されなくなるけど、100％でもなる
+        width: 100%;//0にすると表示されなくなるけど、100％でもなる
         background-color: $background-sidebar;
+        padding-top: 217px;
+        //max-height: auto;
+        display: block;
+        padding-bottom: 100vh;
+        transition: 0.5s;
     }
+    @include breakpoint(pc) {
+        width: 20%;
+        height: 95%;
+        grid-template-columns: min(350px);
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 5;
+    }
+    
 }
 
-.l-sidebar.open {
-    .l-sidebar__section {
-        width: 340px;
+.l-sidebar {
+    &.open {
+        .l-sidebar__section {
+            width: 87vw;
+            //max-width: 100%;
+            right: 0;
+            @include breakpoint(tablet) {
+                width: 44vw;
+            }
+        }
     }
 }
-
-/*nav {
-    left: 187px;
-    top: 0%;
-    width: 328px;
-}
-*/
