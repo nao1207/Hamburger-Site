@@ -3,6 +3,12 @@
 @use "../../foundation/variable" as *;
 
 .p-access {
+    @include breakpoint(pc) {
+        max-height: 649px;
+        //width: 80%;
+        //height: 22%;
+
+    }
     &__map > img {
         max-height: 691px;
         position: absolute;
@@ -15,18 +21,11 @@
             }
         }
         @include breakpoint(pc) {
-            &__map > img {
-                max-height: 649px;
-                width: 80%;
-                height: 22%;
-                grid-column-start: 1/3;
-                grid-column-end: 2/3;
-                grid-row-start: 5/6;
-                grid-row-end: 6/6;
-
-            }
+            width: 80%;
+            background-size: cover;
+            height: auto;
         }
-    }
+        }
     &__text {
         width: 100vw;
         height: auto;
@@ -35,6 +34,8 @@
         padding: 10% 3%;
         @include breakpoint(pc) {
             width: 50%;
+            grid-column: 1/2;
+            grid-row: 4/5;
         }
     }
 }

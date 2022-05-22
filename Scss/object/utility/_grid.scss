@@ -3,7 +3,14 @@
 .u-grid {
     @include breakpoint(pc) {
         display: grid;
-        grid-template-column: 8fr 2fr;
-        grid-template-row: 0.7fr 1.8fr 4.8fr 2.2fr 0.5fr;
+        grid-template-columns: 1fr minmax(290px,20%);
+        grid-template-rows: 217px 1fr 150px;
+        //grid-template-rows: 7% 18% 48% 22% 5%;
+        &__main {
+            @include breakpoint(pc) {
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+        }  
     }
 }

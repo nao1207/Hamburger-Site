@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+@use "variable" as *;
 *,
 *:before,
 *:after {
@@ -15,6 +16,9 @@ body {
     width: 100%;
     font-family: 'M PLUS 1', sans-serif;
     font-family: 'Philosopher', sans-serif;
+    &.open {
+        position: sticky;
+    }
 }
 
 li {
