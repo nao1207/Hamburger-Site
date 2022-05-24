@@ -24,7 +24,6 @@ component
 @use "object/component/button";
 @use "object/component/dialog";
 @use "object/component/inner";
-@use "object/component/section";
 @use "object/component/text";
 @use "object/component/title";
 
@@ -32,8 +31,10 @@ component
 project
 ---------------*/
 @use "object/project/access";
+@use "object/project/archive";
 @use "object/project/articles";
 @use "object/project/branch-menu";
+@use "object/project/description";
 @use "object/project/gallery";
 @use "object/project/main";
 @use "object/project/search";

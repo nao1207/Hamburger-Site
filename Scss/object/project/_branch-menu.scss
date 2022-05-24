@@ -10,13 +10,11 @@
         margin-bottom: 5%;
     }
     &__content {
-        margin-top: 50vh;
-        //padding-bottom: 20px;
+        margin-top: 60%;
         padding: 15px;
         display: flex;
         justify-content: flex-end;
         flex-direction: column;
-        //max-width: 100vw;
     }
 
     &__takeout {
@@ -26,6 +24,9 @@
         margin-bottom: 20px;
         background-position: center;
         background-size:cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     &__eatin {
@@ -35,6 +36,9 @@
         margin-bottom: 20px;
         background-position: center;
         background-size:cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     &__lists {

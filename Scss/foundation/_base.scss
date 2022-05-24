@@ -12,15 +12,19 @@
 }
 
 body {
-    //max-width: 375px;
     width: 100%;
     font-family: 'M PLUS 1', sans-serif;
     font-family: 'Philosopher', sans-serif;
-    &.open {
-        position: sticky;
-    }
 }
 
 li {
     list-style: none;
 }
+
+a {
+    text-decoration: none;
+}
+
+//body.fixed {
+//    position: fixed;
+//}

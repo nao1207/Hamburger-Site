@@ -1,0 +1,21 @@
+@use "../../foundation/variable" as *;
+
+.p-chize__main-visual {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) 50%),url("../../mainvisual-img/page-title_arcive@2x.jpg");
+    background-size: cover;
+    margin-bottom: 30px;
+    @include breakpoint(tablet) {
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) 50%),url("../../mainvisual-img/page-title_arcive.jpg");
+    }
+}
+
+.p-chize-description {
+    padding: 0 22px 22px 22px;
+    &__title {
+        margin-bottom: 30px;
+        p {
+            color: $text-item;
+            font-size: 1rem;
+        }
+    }
+}

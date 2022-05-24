@@ -18,7 +18,7 @@
                 <div class="c-inner">
                     <h2 class="c-sidebar__button">Menu</h2>
                     <div class="l-header__section">
-                        <h1 class="c-site__title">Hamburger</h1>
+                        <a href="#"><h1 class="c-site__title">Hamburger</h1></a>
                         <form action="" class="p-search__form">
                         <input type="text" class="p-search__box">
                         <input type="submit" name="submit" class="p-search__button" value="検索">
@@ -28,11 +28,11 @@
             </header>
 
             <main class="u-grid__main">
-                <div class="p-main-visual">
+                <div class="p-main-visual c-main-visual">
                     <h2 class="p-main-visual__title">ダミーサイト</h2>
                 </div><!--.p-main-visual-->
 
-                <section class="p-branch-menu c-section">
+                <section class="p-branch-menu">
                     <ul class="p-branch-menu__lists">
                         <li class="p-branch-menu__takeout"><!--画像挿入中-->
                             <h2 class="c-title--underline">
@@ -87,18 +87,15 @@
                     </ul>
                 </section><!-- .branch-menu .c-section-->
 
-                <section class="p-access c-section">
-                    <div class="p-access__map">
-                        <img src="../mainvisual-img/map.png" alt="地図"><!--絶対位置-->
-                    </div>
-                    <div class="c-text p-access__text"><!--相対位置-->
+                <section class="p-access">
+                    <div class="c-text p-access__text">
                         <h2 class="c-title--underline__access">見出しが入ります</h2>
                         <p>
                             テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                         </p>
                     </div>
                 </section>
-            </main>
+            </main><!--u-grid__main-->
         
             <footer class="l-footer">
                 <ul class="l-footer__menu">
@@ -107,40 +104,40 @@
                 </ul>
                 <address>Copyright : RaiseTech</address>
             </footer>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="script.js"></script>
-    </body>
 
-    <article class="l-sidebar">
-        <div class="l-sidebar__section">
-            <h2 class="c-sidebar__button--close"><img src="img/close.png" alt=""></h2>
-            <ul class="l-sidebar__lists">
-                <h3 class="p-sidebar-items__title">バーガー</h3>
-                <li>ハンバーガー</li>
-                <li>チーズバーガー</li>
-                <li>テリヤキバーガー</li>
-                <li>アボカドバーガー</li>
-                <li>フィッシュバーガー</li>
-                <li>ベーコンバーガー</li>
-                <li>チキンバーガー</li>
-            </ul>
-            <ul class="l-sidebar__lists">
-                <h3 class="p-sidebar-items__title">サイド</h3>
-                <li>ポテト</li>
-                <li>サラダ</li>
-                <li>ナゲット</li>
-                <li>コーン</li>
-            </ul>
-            <ul class="l-sidebar__lists">
-                <h3 class="p-sidebar-items__title">ドリンク</h3>
-                <li>コーラ</li>
-                <li>ファンタ</li>
-                <li>オレンジ</li>
-                <li>アップル</li>
-                <li>紅茶(Ice/Hot)</li>
-                <li>コーヒー(Ice/Hot)</li>
-            </ul>
-        </div><!--.l-sidebar__section-->
-    </article>
-</div><!--.u-grid-->
+            <article class="l-sidebar">
+                <div class="l-sidebar__section">
+                    <h2 class="c-sidebar__button--close"><img src="img/close.png" alt=""></h2>
+                    <ul class="l-sidebar__lists">
+                        <h3 class="p-sidebar-items__title">バーガー</h3>
+                        <li>ハンバーガー</li>
+                        <a href="archive.html"><li>チーズバーガー</li></a>
+                        <li>テリヤキバーガー</li>
+                        <li>アボカドバーガー</li>
+                        <li>フィッシュバーガー</li>
+                        <li>ベーコンバーガー</li>
+                        <li>チキンバーガー</li>
+                    </ul>
+                    <ul class="l-sidebar__lists">
+                        <h3 class="p-sidebar-items__title">サイド</h3>
+                        <li>ポテト</li>
+                        <li>サラダ</li>
+                        <li>ナゲット</li>
+                        <li>コーン</li>
+                    </ul>
+                    <ul class="l-sidebar__lists">
+                        <h3 class="p-sidebar-items__title">ドリンク</h3>
+                        <li>コーラ</li>
+                        <li>ファンタ</li>
+                        <li>オレンジ</li>
+                        <li>アップル</li>
+                        <li>紅茶(Ice/Hot)</li>
+                        <li>コーヒー(Ice/Hot)</li>
+                    </ul>
+                </div><!--.l-sidebar__section-->
+            </article>
+        </div><!--.u-grid-->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            <script src="script.js"></script>
+    </body>
 </html>

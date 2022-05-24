@@ -1,4 +1,14 @@
 @charset "UTF-8";
+/*------------------------------
+色変数
+------------------------------*/
+/*-----背景色-----*/
+/*-----タイトル-----*/
+/*-----テキスト-----*/
+/*-----ボタン-----*/
+/*------------------------------
+breakpoint
+------------------------------*/
 *,
 *:before,
 *:after {
@@ -19,16 +29,10 @@ li {
   list-style: none;
 }
 
-/*------------------------------
-色変数
-------------------------------*/
-/*-----背景色-----*/
-/*-----タイトル-----*/
-/*-----テキスト-----*/
-/*-----ボタン-----*/
-/*------------------------------
-breakpoint
-------------------------------*/
+a {
+  text-decoration: none;
+}
+
 .l-footer {
   text-align: center;
   color: #fff;
@@ -64,13 +68,27 @@ breakpoint
 .l-footer__menu > li:last-child {
   padding-left: 1.1rem;
 }
-.l-footer.open {
-  position: fixed;
+@media (min-width: 1025px) {
+  .l-footer {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
 }
 
 address {
   font-size: 0.875rem;
   font-weight: 100;
+}
+
+@media (min-width: 600px) {
+  .l-footer.open {
+    position: fixed;
+  }
+}
+@media (min-width: 1025px) {
+  .l-footer.open {
+    position: fixed;
+  }
 }
 
 .l-header {
@@ -90,17 +108,21 @@ address {
 @media (min-width: 1025px) {
   .l-header {
     width: 100%;
-    max-width: 81vw;
     object-fit: cover;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-column: 1/2;
+    grid-row: 1/2;
   }
 }
 
-.l-header.open {
-  position: fixed;
+@media (min-width: 600px) {
+  .l-header.open {
+    position: fixed;
+  }
+}
+@media (min-width: 1025px) {
+  .l-header.open {
+    position: fixed;
+  }
 }
 
 .l-sidebar {
@@ -109,25 +131,24 @@ address {
   right: 0;
 }
 .l-sidebar__section {
-  position: absolute;
   z-index: 2;
   overflow: hidden;
-  width: 100%;
+  width: 0;
   background-color: #F2EDE9;
   padding-top: 217px;
-  display: block;
-  padding-bottom: 100vh;
   transition: 0.5s;
 }
 @media (min-width: 1025px) {
+  .l-sidebar__section {
+    width: 100%;
+  }
+}
+@media (min-width: 1025px) {
   .l-sidebar {
-    width: 20%;
-    height: 95%;
-    grid-template-columns: 350px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 5;
+    width: auto;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    position: inherit;
   }
 }
 
@@ -152,6 +173,25 @@ component > _background.scss
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+}
+
+.c-main-visual {
+  width: 100%;
+  height: 285px;
+  display: flex;
+  align-items: center;
+}
+
+/*----- archive -----*/
+.c-archive__main-visual {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 50%), url("../../mainvisual-img/page-title_archive@2x.jpg");
+  background-size: cover;
+  margin-bottom: 30px;
+}
+@media (min-width: 600px) {
+  .c-archive__main-visual {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 50%), url("../../mainvisual-img/page-title_archive.jpg");
+  }
 }
 
 .c-contents--item__background {
@@ -228,14 +268,6 @@ component > _background.scss
 /*------------------------------
 object > component > text
 ------------------------------*/
-/*-----フロントページテキスト-----*/
-.c-contents-item__text {
-  color: #3C2A10;
-  font-size: 1rem;
-  font-weight: regular;
-  display: inline-block;
-}
-
 /*-----地図テキスト-----*/
 .p-access__text p {
   color: #fff;
@@ -315,7 +347,7 @@ component > _title.scss
   font-size: 1.875rem;
   font-weight: bold;
   text-align: left;
-  left: 8%;
+  padding: 3%;
   position: relative;
   display: inline-block;
 }
@@ -323,7 +355,7 @@ component > _title.scss
   content: "";
   position: absolute;
   display: inline-block;
-  left: 0;
+  left: 3%;
   background-color: #fff;
   bottom: -12px;
   /*線の上下位置*/
@@ -331,6 +363,16 @@ component > _title.scss
   /*線の長さ*/
   height: 2px;
   /*線の太さ*/
+}
+@media (min-width: 600px) {
+  .c-title--underline__access::after {
+    bottom: -4px;
+  }
+}
+@media (min-width: 1025px) {
+  .c-title--underline__access::after {
+    bottom: -60px;
+  }
 }
 
 .p-sidebar-items__title {
@@ -345,6 +387,32 @@ component > _title.scss
   margin-bottom: 3px;
 }
 
+/*----- チーズバーガー -----*/
+.c-title__textline {
+  color: #fff;
+  font-size: 2.5625rem;
+  text-align: left;
+  left: 30px;
+  top: 30px;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+.c-title__textline::after {
+  content: "チーズバーガー";
+  font-size: 1rem;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  bottom: -20px;
+  /*線の上下位置*/
+}
+
+.c-description__title {
+  font-size: 1.75rem;
+  color: #3C2A10;
+}
+
 /*----- menuタイトル -----*/
 .c-title__sidebar {
   font-size: 1.25rem;
@@ -352,39 +420,80 @@ component > _title.scss
   margin-bottom: 80px;
 }
 
-.p-access__map > img {
-  max-height: 691px;
-  position: absolute;
-  max-width: 100%;
+.p-access {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.29) 50%), url("../../../mainvisual-img/map.png");
+  background-size: cover;
+  width: 100%;
+  max-height: auto;
+  background-position: center;
   background-size: cover;
 }
 @media (min-width: 600px) {
-  .p-access__map > img__map > img {
-    max-height: 415px;
+  .p-access {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) 100%), url("../../../mainvisual-img/map.png");
   }
 }
 @media (min-width: 1025px) {
-  .p-access__map > img__map > img {
-    max-height: 649px;
-    width: 80%;
-    height: 22%;
-    grid-column-start: 1/3;
-    grid-column-end: 2/3;
-    grid-row-start: 5/6;
-    grid-row-end: 6/6;
+  .p-access {
+    background: linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.29) 100%), url("../../../mainvisual-img/map.png");
   }
 }
 .p-access__text {
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   height: auto;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.29);
   padding: 10% 3%;
+  text-align: left;
 }
 @media (min-width: 1025px) {
   .p-access__text {
-    width: 50%;
+    width: 58%;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.4);
   }
+  .p-access__text p {
+    padding-top: 128px;
+  }
+}
+
+.p-archive-description__title {
+  margin: 0 auto 30px 22px;
+}
+.p-archive-description p {
+  margin: 20px;
+}
+
+.p-archive__card {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.p-archive__item {
+  background-color: #3C2B1C;
+  color: #fff;
+  text-align: center;
+}
+.p-archive__item p {
+  padding-right: 20%;
+}
+.p-archive__item-text {
+  text-align: left;
+  padding-left: 17px;
+}
+.p-archive__item-text .p-archive__title {
+  font-size: 1.25rem;
+  margin: 24px 0;
+}
+.p-archive__item-text .p-archive__sub-title {
+  margin-bottom: 10px;
+}
+.p-archive__item button {
+  background-color: #fff;
+  color: #fff;
+  border-radius: 5%;
+  padding: 10px 42px;
+  margin: 43.7px 93px 43.7px 79.9px;
 }
 
 .p-take-out__item {
@@ -393,6 +502,7 @@ component > _title.scss
 
 .p-branch-menu {
   background-position: center;
+  display: flex;
 }
 @media (min-width: 600px) {
   .p-branch-menu {
@@ -402,7 +512,10 @@ component > _title.scss
 }
 .p-branch-menu__content {
   margin-top: 60%;
-  padding-bottom: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 .p-branch-menu__takeout {
   background-image: url("../../mainvisual-img/takeout.png");
@@ -411,14 +524,20 @@ component > _title.scss
   margin-bottom: 20px;
   background-position: center;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .p-branch-menu__eatin {
   background-image: url("../../mainvisual-img/eatin.png");
   width: 100%;
   max-height: auto;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   background-position: center;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .p-branch-menu__lists {
   max-width: 100%;
@@ -433,24 +552,38 @@ component > _title.scss
     height: auto;
   }
 }
-@media (min-width: 1025px) {
-  .p-branch-menu {
-    width: 80vw;
-  }
-}
-
 .p-branch-menu__items {
-  display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
   background-color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 15px;
-  max-width: 90%;
+  margin-bottom: 20px;
   height: auto;
   text-align: center;
   padding: 1rem;
   text-align: left;
   color: #3C2A10;
+}
+
+.p-chize__main-visual {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 50%), url("../../mainvisual-img/page-title_arcive@2x.jpg");
+  background-size: cover;
+  margin-bottom: 30px;
+}
+@media (min-width: 600px) {
+  .p-chize__main-visual {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 50%), url("../../mainvisual-img/page-title_arcive.jpg");
+  }
+}
+
+.p-chize-description {
+  padding: 0 22px 22px 22px;
+}
+.p-chize-description__title {
+  margin-bottom: 30px;
+}
+.p-chize-description__title p {
+  color: #3C2A10;
+  font-size: 1rem;
 }
 
 .p-main-visual {
@@ -459,7 +592,7 @@ component > _title.scss
   height: 285px;
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   background-size: cover;
   background-position: center;
 }
@@ -478,18 +611,10 @@ component > _title.scss
 @media (min-width: 1025px) {
   .p-main-visual {
     background-image: url("../../mainvisual-img/mainvisual-pc@2x.jpg");
-    height: 530px;
     background-size: cover;
-    width: 80%;
-    grid-column-start: 1/3;
-    grid-column-end: 2/3;
-    grid-row-start: 2/6;
-    grid-row-end: 3/6;
+    width: 100%;
+    height: 530px;
   }
-}
-
-.p-main-visual.open {
-  position: fixed;
 }
 
 .p-search__form {
@@ -531,14 +656,15 @@ component > _title.scss
 @media (min-width: 1025px) {
   .u-grid {
     display: grid;
-    grid-template-column: 8fr 2fr;
-    grid-template-row: 0.7fr 1.8fr 4.8fr 2.2fr 0.5fr;
+    grid-template-columns: 80% minmax(260px, 20%);
+    grid-template-rows: 217px 1fr 150px;
   }
 }
-
-.wrapper.open {
-  position: fixed;
-  opacity: rgba(0, 0, 0, 0.5);
+@media (min-width: 1025px) and (min-width: 1025px) {
+  .u-grid__main {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
 }
 
 /*------------------------------

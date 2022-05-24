@@ -1,0 +1,45 @@
+@use "../../foundation/variable" as *;
+
+.p-archive-description {
+    &__title {
+        margin: 0 auto 30px 22px;
+    }
+    p {
+        margin: 20px;
+    }
+}
+
+.p-archive {
+    &__card {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+    &__item {
+        background-color: $background-card;
+        color: $text-card;
+        text-align: center;
+        p {
+            padding-right: 20%;
+        }
+        &-text {
+            text-align: left;
+            padding-left: 17px;
+            .p-archive__title {
+                font-size: 1.25rem;
+                margin: 24px 0;
+            }
+            .p-archive__sub-title {
+                margin-bottom: 10px;
+            }
+        }
+
+        button {
+            background-color: $button-card-background;
+            color: $text-card;
+            border-radius: 5%;
+            padding: 10px 42px;
+            margin: 43.7px 93px 43.7px 79.9px;
+        }
+    }
+}
