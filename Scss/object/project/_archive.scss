@@ -4,16 +4,49 @@
     &__title {
         margin: 0 auto 30px 22px;
     }
+    @include breakpoint(tablet) {
+        margin-bottom: 25px;
+    }
     p {
         margin: 20px;
     }
+    @include breakpoint(tablet) {
+        margin-right: 35px;
+        margin-bottom: 37px;
+        margin-left: 42px;
+    }
 }
 
+.p-archive__section {
+    figure:last-child {
+        margin-bottom: 113.4px;
+        @include breakpoint(tablet) {
+            margin-bottom: 170.5px;
+        }
+        @include breakpoint(pc) {
+            margin-bottom: 249px;
+        }
+    }
+    @include breakpoint(tablet) {
+        margin-right: 35px;
+        margin-left: 35px;
+    }
+}
 .p-archive {
     &__card {
         display: flex;
         flex-direction: column;
         margin: 20px;
+        @include breakpoint(tablet) {
+            flex-direction: row;
+            img {
+                width: 50%;
+                background-size: cover;
+            }
+        }
+        @include breakpoint(pc) {
+            margin: 30px;
+        }
     }
     &__item {
         background-color: $background-card;
@@ -33,11 +66,12 @@
                 margin-bottom: 10px;
             }
         }
+        @include breakpoint(tablet) {
+            width: 50%;
+        }
 
         button {
-            background-color: $button-card-background;
             color: $text-card;
-            border-radius: 5%;
             padding: 10px 42px;
             margin: 43.7px 93px 43.7px 79.9px;
         }

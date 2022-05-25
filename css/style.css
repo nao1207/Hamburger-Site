@@ -191,6 +191,7 @@ component > _background.scss
 @media (min-width: 600px) {
   .c-archive__main-visual {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 50%), url("../../mainvisual-img/page-title_archive.jpg");
+    margin-bottom: 36px;
   }
 }
 
@@ -223,6 +224,15 @@ component > _background.scss
   flex-wrap: wrap;
   margin: 0 auto 13px auto;
   background-repeat: no-repeat;
+}
+
+button {
+  background-color: #fff;
+  border-radius: 24px;
+}
+button a {
+  color: #707070;
+  font-weight: bold;
 }
 
 .c-sidebar__button {
@@ -393,10 +403,14 @@ component > _title.scss
   font-size: 2.5625rem;
   text-align: left;
   left: 30px;
-  top: 30px;
   position: relative;
   display: inline-block;
   margin: 0;
+}
+@media (min-width: 600px) {
+  .c-title__textline {
+    display: flex;
+  }
 }
 .c-title__textline::after {
   content: "チーズバーガー";
@@ -407,7 +421,6 @@ component > _title.scss
   bottom: -20px;
   /*線の上下位置*/
 }
-
 .c-description__title {
   font-size: 1.75rem;
   color: #3C2A10;
@@ -460,14 +473,60 @@ component > _title.scss
 .p-archive-description__title {
   margin: 0 auto 30px 22px;
 }
+@media (min-width: 600px) {
+  .p-archive-description {
+    margin-bottom: 25px;
+  }
+}
 .p-archive-description p {
   margin: 20px;
+}
+@media (min-width: 600px) {
+  .p-archive-description {
+    margin-right: 35px;
+    margin-bottom: 37px;
+    margin-left: 42px;
+  }
+}
+
+.p-archive__section figure:last-child {
+  margin-bottom: 113.4px;
+}
+@media (min-width: 600px) {
+  .p-archive__section figure:last-child {
+    margin-bottom: 170.5px;
+  }
+}
+@media (min-width: 1025px) {
+  .p-archive__section figure:last-child {
+    margin-bottom: 249px;
+  }
+}
+@media (min-width: 600px) {
+  .p-archive__section {
+    margin-right: 35px;
+    margin-left: 35px;
+  }
 }
 
 .p-archive__card {
   display: flex;
   flex-direction: column;
   margin: 20px;
+}
+@media (min-width: 600px) {
+  .p-archive__card {
+    flex-direction: row;
+  }
+  .p-archive__card img {
+    width: 50%;
+    background-size: cover;
+  }
+}
+@media (min-width: 1025px) {
+  .p-archive__card {
+    margin: 30px;
+  }
 }
 .p-archive__item {
   background-color: #3C2B1C;
@@ -488,10 +547,13 @@ component > _title.scss
 .p-archive__item-text .p-archive__sub-title {
   margin-bottom: 10px;
 }
+@media (min-width: 600px) {
+  .p-archive__item {
+    width: 50%;
+  }
+}
 .p-archive__item button {
-  background-color: #fff;
   color: #fff;
-  border-radius: 5%;
   padding: 10px 42px;
   margin: 43.7px 93px 43.7px 79.9px;
 }

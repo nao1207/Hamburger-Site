@@ -30,6 +30,7 @@ component > _background.scss
     margin-bottom: 30px;
     @include breakpoint(tablet) {
         background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) 50%),url("../../mainvisual-img/page-title_archive.jpg");
+        margin-bottom: 36px;
     }
 }
 

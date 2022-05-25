@@ -96,10 +96,13 @@ component > _title.scss
     font-size: 2.5625rem;
     text-align: left;
     left: 30px;
-    top: 30px;
     position: relative;
     display: inline-block;
     margin: 0;
+    @include breakpoint(tablet) {
+        display: flex;
+    }
+
     &::after {
         content: 'チーズバーガー';
         font-size: 1rem;
@@ -107,6 +110,9 @@ component > _title.scss
         display: inline-block;
         left: 0;
         bottom: -20px;/*線の上下位置*/
+        @include breakpoint(tablet) {
+            //bottom: 15px;
+        }
     }
 }
 
