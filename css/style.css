@@ -20,9 +20,11 @@ breakpoint
 }
 
 body {
-  width: 100%;
   font-family: "M PLUS 1", sans-serif;
   font-family: "Philosopher", sans-serif;
+}
+body.open {
+  position: fixed;
 }
 
 li {
@@ -153,6 +155,10 @@ address {
   }
 }
 
+.l-sidebar.open {
+  overflow-y: scroll;
+  height: 100vh;
+}
 .l-sidebar.open .l-sidebar__section {
   width: 87vw;
   right: 0;
@@ -750,6 +756,9 @@ component > _title.scss
   margin-bottom: 30px;
 }
 
+.u-grid {
+  position: relative;
+}
 @media (min-width: 1025px) {
   .u-grid {
     display: grid;
