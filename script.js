@@ -1,12 +1,12 @@
 $(function(){
     $('.c-sidebar__button').click(function(){
         $('.l-sidebar').addClass('open');
-        //$('body').addClass('fixed');
+        $('.main-background').addClass('open');
         $('.c-sidebar__button--close').addClass('open');
     });
     $('.c-sidebar__button--close').click(function(){
         $('.l-sidebar.open').removeClass('open');
-        //$('body').removeClass('fixed');
+        $('.main-background').removeClass('open');
         $('.c-sidebar__button--close.open').removeClass('open');
         
     })

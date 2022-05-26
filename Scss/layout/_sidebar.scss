@@ -5,18 +5,18 @@
     top: 0;
     right: 0;
     height: 100%;
+    z-index: 3;
     &__section {
-        //position: absolute;
-        z-index: 2;
+        //z-index: 2;
         overflow: hidden;
         width: 0;//0にすると表示されなくなるけど、100％でもなる
         background-color: $background-sidebar;
         padding-top: 217px;
         //display: block;
+        //position: absolute;
         transition: 0.5s;
         @include breakpoint(pc) {
             width: 100%;
-            //position: inherit;
         }
     }
     @include breakpoint(pc) {
@@ -31,7 +31,8 @@
 .l-sidebar {
     &.open {
         overflow-y: scroll;
-        height: 100vh;
+        height: 100%;
+        z-index: 2;
         .l-sidebar__section {
             width: 87vw;
             right: 0;
