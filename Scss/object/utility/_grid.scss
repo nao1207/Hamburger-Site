@@ -2,6 +2,7 @@
 
 .u-grid {
     position: relative;
+    height: 100%;//有効にするとサイドバー短くなる,途中から影響無し
     @include breakpoint(pc) {
         display: grid;
         grid-template-columns: 80% minmax(260px,20%);

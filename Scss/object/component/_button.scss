@@ -17,7 +17,7 @@ button {
     padding-top: 14px;
     margin-left: 83%;
     cursor: pointer;
-
+    z-index: 3;
     @include breakpoint(pc) {
         display: none;
     }
