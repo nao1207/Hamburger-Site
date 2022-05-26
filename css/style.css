@@ -129,6 +129,7 @@ address {
   position: absolute;
   top: 0;
   right: 0;
+  height: 100%;
 }
 .l-sidebar__section {
   z-index: 2;
@@ -180,6 +181,7 @@ component > _background.scss
   height: 285px;
   display: flex;
   align-items: center;
+  background-size: cover;
 }
 
 /*----- archive -----*/
@@ -329,6 +331,11 @@ component > _title.scss
   color: #fff;
 }
 
+.c-title-color {
+  color: #3C2A10;
+  line-height: 50px;
+}
+
 .c-title--underline {
   color: #fff;
   font-size: 2.5625rem;
@@ -470,6 +477,29 @@ component > _title.scss
   }
 }
 
+.p-archive-search__main-visual .c-title__textline {
+  color: #fff;
+  font-size: 2.5625rem;
+  text-align: left;
+  left: 30px;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+@media (min-width: 600px) {
+  .p-archive-search__main-visual .c-title__textline {
+    display: flex;
+  }
+}
+.p-archive-search__main-visual .c-title__textline::after {
+  content: "チーズバーガー";
+  font-size: 1rem;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  bottom: -20px;
+  /*線の上下位置*/
+}
 .p-archive-description__title {
   margin: 0 auto 30px 22px;
 }
@@ -715,6 +745,11 @@ component > _title.scss
   background-color: #F2EDE9;
 }
 
+.p-shingle__main-visual {
+  background-image: url("../../../mainvisual-img/page-title_shingle.png");
+  margin-bottom: 30px;
+}
+
 @media (min-width: 1025px) {
   .u-grid {
     display: grid;
@@ -727,6 +762,10 @@ component > _title.scss
     grid-column: 1/2;
     grid-row: 2/3;
   }
+}
+
+.u-grid__shingle {
+  padding: 0 20px;
 }
 
 /*------------------------------

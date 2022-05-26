@@ -27,6 +27,10 @@ component > _title.scss
     color: $title-contents;
 }
 
+.c-title-color {
+    color: $title-item;
+    line-height: 50px;
+}
 .c-title--underline {
     color: $title-contents;
     font-size: 2.5625rem;
