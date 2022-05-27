@@ -4,8 +4,13 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- style.css -->
+        <!-- リセットcss -->
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <!-- Googlefont -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@500&display=swap" rel="stylesheet">
+        <!-- style.css -->
         <link rel="stylesheet" href="css/style.css">
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -20,12 +25,11 @@
                     <h2 class="c-sidebar__button">Menu</h2>
                     <div class="l-header__section">
                         <a href="#"><h1 class="c-site__title">Hamburger</h1></a>
-                        <a href="archive-seach.html">
+                        
                             <form action="" class="p-search__form">
-                            <input type="text" class="p-search__box">
-                            <input type="submit" name="submit" class="p-search__button" value="検索">
+                                <input type="text" class="p-search__box">
+                                <input type="button" onclick="location.href='archive-seach.html'" name="submit" class="p-search__button" value="検索">
                             </form>
-                        </a>
                     </div>
                 </div><!--.c-inner-->
             </header>

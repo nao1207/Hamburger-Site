@@ -11,6 +11,11 @@
 	box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+    font-family: 'M PLUS 1', sans-serif;
+}
+
 li {
     list-style: none;
 }
@@ -21,8 +26,6 @@ a {
 
 body {
     width: 100%;
-    font-family: 'M PLUS 1', sans-serif;
-    font-family: 'Philosopher', sans-serif;
     &.open {
         position: fixed;
     }

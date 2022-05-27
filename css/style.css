@@ -19,6 +19,11 @@ breakpoint
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+  font-family: "M PLUS 1", sans-serif;
+}
+
 li {
   list-style: none;
 }
@@ -29,8 +34,6 @@ a {
 
 body {
   width: 100%;
-  font-family: "M PLUS 1", sans-serif;
-  font-family: "Philosopher", sans-serif;
 }
 body.open {
   position: fixed;
@@ -732,8 +735,17 @@ component > _title.scss
   display: inline-block;
   position: relative;
 }
-
-.p-search__box {
+.p-search__form::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url("../../../img/search.png");
+  display: inline-block;
+  position: absolute;
+  top: 11px;
+  left: 16px;
+}
+.p-search__form .p-search__box {
   width: 230px;
   height: 46px;
   margin-right: 12px;
@@ -741,17 +753,7 @@ component > _title.scss
   border: solid 1px;
   color: #707070;
   background-color: #fff;
-}
-.p-search__box::before {
-  content: "";
-  width: 24px;
-  height: 24px;
-  font-weight: 100;
-  background: url("../../../img/search.png");
-  display: inline-block;
-  position: absolute;
-  top: 11px;
-  left: 16px;
+  padding-left: 50px;
 }
 
 .p-search__button {
