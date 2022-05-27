@@ -169,7 +169,7 @@ address {
   overflow-y: scroll;
   height: 100vh;
   z-index: 2;
-  padding-bottom: 100%;
+  padding-bottom: 50%;
 }
 .l-sidebar.open .l-sidebar__section {
   width: 87vw;
@@ -747,7 +747,7 @@ component > _title.scss
   width: 24px;
   height: 24px;
   font-weight: 100;
-  background: url(../../../img/search.png);
+  background: url("../../../img/search.png");
   display: inline-block;
   position: absolute;
   top: 11px;
