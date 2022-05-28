@@ -11,11 +11,9 @@ button {
     }
 }
 
-.c-sidebar__button {
+.c-button--sidebar {
     color: $title-sidebar;
-    font-size: 1.25rem;
-    padding-top: 14px;
-    margin-left: 83%;
+    font-size: 2rem;
     cursor: pointer;
     z-index: 3;
     @include breakpoint(pc) {

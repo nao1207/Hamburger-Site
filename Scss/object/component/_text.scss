@@ -5,22 +5,25 @@
 object > component > text
 ------------------------------*/
 
-
+/*-----itemテキスト-----*/
+.c-text--item {
+    font-size: 1.6rem;
+    font-weight: regular;
+}
 
 /*-----地図テキスト-----*/
-.p-access__text p {
+.c-text--access {
     color: $text-contents;
-    font-size: 0.875rem;
+    font-size: 1.6rem;
     font-weight: bold;
     line-height: 33px;
-    padding: 1.5rem;
 }
 
 /*-----サイドバーテキスト-----*/
 .l-sidebar__lists {
     & li {
     color: $text-sidebar;
-    font-size: 1.25rem;
+    font-size: 2rem;
     margin-left: 65px;
     margin-bottom: 23px;
     }

@@ -1,13 +1,13 @@
 $(function(){
-    $('.c-sidebar__button').click(function(){
+    $('.c-button--sidebar').click(function(){
         $('.l-sidebar').addClass('open');
-        $('.main-background').addClass('open');
+        $('.main-watermark_bg').addClass('open');
         $('body').addClass('open');
         $('.c-sidebar__button--close').addClass('open');
     });
     $('.c-sidebar__button--close').click(function(){
         $('.l-sidebar.open').removeClass('open');
-        $('.main-background').removeClass('open');
+        $('.main-watermark_bg').removeClass('open');
         $('body.open').removeClass('open');
         $('.c-sidebar__button--close.open').removeClass('open');
     })

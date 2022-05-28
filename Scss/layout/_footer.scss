@@ -14,11 +14,11 @@
         display: flex;
         justify-content: center;
         line-height: 29px;
-        padding: 40px;
+        padding: 40px 0 30px 0;
 
     li {
-    font-size: 1.25rem;
-    font-weight: 100;
+    font-size: 2rem;
+    //font-weight: regular;
     }
 
     & > li:first-child {
@@ -30,9 +30,10 @@
             display: inline-block;
             background-color: $text-footer;
             width: 1.5px;
-            height: 1.25rem;
+            height: 2rem;
             right: -0.625rem;
             top: 6px;
+            margin-left: 1rem;
         }
     }
 
@@ -45,18 +46,7 @@
         grid-column: 1/3;
         grid-row: 3/4;
     }
-}
-
-address {
-    font-size: 0.875rem;
-    font-weight: 100;
-}
-
-.l-footer.open {
-    @include breakpoint(tablet) {
-        position: fixed;
-    }
-    @include breakpoint(pc) {
-        position: fixed;
+    address {
+        font-size: 1.4rem;
     }
 }

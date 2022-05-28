@@ -7,6 +7,9 @@
 /*-----テキスト-----*/
 /*-----ボタン-----*/
 /*------------------------------
+タイトルタグ大きさ指定
+------------------------------*/
+/*------------------------------
 breakpoint
 ------------------------------*/
 *,
@@ -21,7 +24,6 @@ breakpoint
 
 html {
   font-size: 62.5%;
-  font-family: "M PLUS 1", sans-serif;
 }
 
 li {
@@ -34,13 +36,14 @@ a {
 
 body {
   width: 100%;
+  font-family: "M PLUS 1", "sans-serif";
 }
 body.open {
   position: fixed;
 }
 
-.main-background.open {
-  background-color: rgba(0, 0, 0, 0.6);
+.main-watermark_bg.open {
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -60,11 +63,10 @@ body.open {
   display: flex;
   justify-content: center;
   line-height: 29px;
-  padding: 40px;
+  padding: 40px 0 30px 0;
 }
 .l-footer__menu li {
-  font-size: 1.25rem;
-  font-weight: 100;
+  font-size: 2rem;
 }
 .l-footer__menu > li:first-child {
   position: relative;
@@ -76,9 +78,10 @@ body.open {
   display: inline-block;
   background-color: #fff;
   width: 1.5px;
-  height: 1.25rem;
+  height: 2rem;
   right: -0.625rem;
   top: 6px;
+  margin-left: 1rem;
 }
 .l-footer__menu > li:last-child {
   padding-left: 1.1rem;
@@ -89,29 +92,24 @@ body.open {
     grid-row: 3/4;
   }
 }
-
-address {
-  font-size: 0.875rem;
-  font-weight: 100;
-}
-
-@media (min-width: 600px) {
-  .l-footer.open {
-    position: fixed;
-  }
-}
-@media (min-width: 1025px) {
-  .l-footer.open {
-    position: fixed;
-  }
+.l-footer address {
+  font-size: 1.4rem;
 }
 
 .l-header {
   background-color: #FFF7EF;
   height: 217px;
 }
+.l-header .c-button--sidebar {
+  padding-top: 14px;
+  text-align: right;
+}
 .l-header__section {
   text-align: center;
+}
+.l-header__section .c-title--header {
+  margin-top: 0;
+  margin-bottom: 38px;
 }
 @media (min-width: 1025px) {
   .l-header__section {
@@ -126,6 +124,7 @@ address {
     object-fit: cover;
     grid-column: 1/2;
     grid-row: 1/2;
+    height: 217px;
   }
 }
 
@@ -166,6 +165,17 @@ address {
     grid-row: 1/3;
     position: inherit;
   }
+}
+.l-sidebar__lists {
+  margin-bottom: 43px;
+}
+.l-sidebar__lists .c-title--sidebar {
+  margin-left: 46px;
+  margin-bottom: 40px;
+}
+.l-sidebar__lists .c-title--sidebar li {
+  margin-bottom: 23px;
+  margin-left: 66px;
 }
 
 .l-sidebar.open {
@@ -258,16 +268,14 @@ button a {
   font-weight: bold;
 }
 
-.c-sidebar__button {
+.c-button--sidebar {
   color: #707070;
-  font-size: 1.25rem;
-  padding-top: 14px;
-  margin-left: 83%;
+  font-size: 2rem;
   cursor: pointer;
   z-index: 3;
 }
 @media (min-width: 1025px) {
-  .c-sidebar__button {
+  .c-button--sidebar {
     display: none;
   }
 }
@@ -293,6 +301,11 @@ button a {
   margin: 0 16px;
   height: 217px;
 }
+@media (min-width: 600px) {
+  .c-inner {
+    margin: 0 26px;
+  }
+}
 @media (min-width: 1025px) {
   .c-inner {
     padding: 67px 65px;
@@ -302,19 +315,24 @@ button a {
 /*------------------------------
 object > component > text
 ------------------------------*/
+/*-----itemテキスト-----*/
+.c-text--item {
+  font-size: 1.6rem;
+  font-weight: regular;
+}
+
 /*-----地図テキスト-----*/
-.p-access__text p {
+.c-text--access {
   color: #fff;
-  font-size: 0.875rem;
+  font-size: 1.6rem;
   font-weight: bold;
   line-height: 33px;
-  padding: 1.5rem;
 }
 
 /*-----サイドバーテキスト-----*/
 .l-sidebar__lists li {
   color: #707070;
-  font-size: 1.25rem;
+  font-size: 2rem;
   margin-left: 65px;
   margin-bottom: 23px;
 }
@@ -334,21 +352,25 @@ footer p .copy {
 component > _title.scss
 ------------------------------*/
 /*サイトタイトル*/
-.c-site__title {
+.c-title--header {
   color: #707070;
-  font-size: 2.5rem;
-  margin-top: 0;
-  margin-bottom: 38px;
+  font-size: 4rem;
 }
 
 /*サイドバータイトル*/
-.c-title__sidebar {
-  font-size: 1.25rem;
+.c-title--sidebar {
+  font-size: 2.4rem;
   color: #707070;
   font-weight: bold;
 }
 
 /*各ページのトップ画像のタイトル*/
+.c-title--main-visual {
+  color: #fff;
+  font-size: 3.6rem;
+  font-weight: bold;
+}
+
 .c-title {
   color: #fff;
 }
@@ -360,10 +382,8 @@ component > _title.scss
 
 .c-title--underline {
   color: #fff;
-  font-size: 2.5625rem;
+  font-size: 4.1rem;
   text-align: left;
-  left: 30px;
-  top: 30px;
   position: relative;
   display: inline-block;
 }
@@ -381,12 +401,17 @@ component > _title.scss
   /*線の太さ*/
 }
 
+.c-title--item {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
 .c-title--underline__access {
   color: #fff;
-  font-size: 1.875rem;
+  font-size: 3rem;
   font-weight: bold;
   text-align: left;
-  padding: 3%;
+  padding-bottom: 3%;
   position: relative;
   display: inline-block;
 }
@@ -394,7 +419,7 @@ component > _title.scss
   content: "";
   position: absolute;
   display: inline-block;
-  left: 3%;
+  left: 0;
   background-color: #fff;
   bottom: -12px;
   /*線の上下位置*/
@@ -405,12 +430,12 @@ component > _title.scss
 }
 @media (min-width: 600px) {
   .c-title--underline__access::after {
-    bottom: -4px;
+    bottom: -10px;
   }
 }
 @media (min-width: 1025px) {
   .c-title--underline__access::after {
-    bottom: -60px;
+    bottom: -50px;
   }
 }
 
@@ -485,17 +510,28 @@ component > _title.scss
   flex-direction: column;
   width: 100vw;
   height: auto;
-  padding: 10% 3%;
+  padding: 40px 40px 51px 40px;
   text-align: left;
+}
+@media (min-width: 600px) {
+  .p-access__text {
+    padding: 41px 42px 43px 42px;
+  }
+}
+.p-access__text .c-title--underline__access {
+  margin-bottom: 40px;
 }
 @media (min-width: 1025px) {
   .p-access__text {
-    width: 58%;
+    width: 63%;
     justify-content: flex-end;
     background-color: rgba(0, 0, 0, 0.4);
+    padding: 83px 134px 40px 119px;
   }
-  .p-access__text p {
-    padding-top: 128px;
+}
+@media (min-width: 1025px) {
+  .p-access__text .c-title--underline__access {
+    margin-bottom: 119px;
   }
 }
 
@@ -626,7 +662,8 @@ component > _title.scss
 }
 .p-branch-menu__content {
   margin-top: 60%;
-  padding: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
@@ -642,6 +679,19 @@ component > _title.scss
   flex-direction: column;
   justify-content: space-between;
 }
+.p-branch-menu__takeout .c-title--underline {
+  top: 30px;
+  left: 30px;
+}
+@media (min-width: 600px) {
+  .p-branch-menu__takeout .c-title--underline {
+    top: 12px;
+    left: 11px;
+  }
+}
+.p-branch-menu__takeout .c-title--item {
+  margin-bottom: 3px;
+}
 .p-branch-menu__eatin {
   background-image: url("../../mainvisual-img/eatin.png");
   width: 100%;
@@ -652,6 +702,19 @@ component > _title.scss
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.p-branch-menu__eatin .c-title--underline {
+  top: 30px;
+  left: 30px;
+}
+@media (min-width: 600px) {
+  .p-branch-menu__eatin .c-title--underline {
+    top: 12px;
+    left: 11px;
+  }
+}
+.p-branch-menu__eatin .c-title--item {
+  margin-bottom: 3px;
 }
 .p-branch-menu__lists {
   max-width: 100%;
@@ -670,12 +733,12 @@ component > _title.scss
   margin: 0 auto;
   flex-wrap: wrap;
   background-color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 20px;
   height: auto;
   text-align: center;
-  padding: 1rem;
+  padding: 7px 10px 15px 10px;
   text-align: left;
   color: #3C2A10;
+  margin-bottom: 15px;
 }
 
 .p-chize__main-visual {
@@ -710,11 +773,18 @@ component > _title.scss
   background-size: cover;
   background-position: center;
 }
-.p-main-visual__title {
-  color: #fff;
-  font-size: 2.25rem;
-  font-weight: bold;
-  padding-left: 1rem;
+.p-main-visual .c-title--main-visual {
+  padding-left: 25px;
+}
+@media (min-width: 600px) {
+  .p-main-visual .c-title--main-visual {
+    padding-left: 5%;
+  }
+}
+@media (min-width: 1025px) {
+  .p-main-visual .c-title--main-visual {
+    padding-left: 5%;
+  }
 }
 @media (min-width: 600px) {
   .p-main-visual {
@@ -742,7 +812,7 @@ component > _title.scss
   background: url("../../../img/search.png");
   display: inline-block;
   position: absolute;
-  top: 11px;
+  top: 14px;
   left: 16px;
 }
 .p-search__form .p-search__box {
@@ -762,6 +832,7 @@ component > _title.scss
   border-radius: 10px;
   border: solid 1px #707070;
   color: #707070;
+  font-size: 1.6rem;
   font-weight: bold;
   background-color: #F2EDE9;
 }
@@ -780,6 +851,8 @@ component > _title.scss
     display: grid;
     grid-template-columns: 80% minmax(260px, 20%);
     grid-template-rows: 217px 1fr 150px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
   }
 }
 @media (min-width: 1025px) and (min-width: 1025px) {

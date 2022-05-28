@@ -7,7 +7,9 @@
         display: grid;
         grid-template-columns: 80% minmax(260px,20%);
         grid-template-rows: 217px 1fr 150px;
-        //grid-template-rows: 7% 18% 48% 22% 5%;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        //grid-template-rows: 7% 1fr 5%;
         &__main {
             @include breakpoint(pc) {
                 grid-column: 1/2;

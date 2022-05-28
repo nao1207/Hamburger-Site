@@ -11,7 +11,8 @@
     }
     &__content {
         margin-top: 60%;
-        padding: 15px;
+        padding-right: 15px;
+        padding-left: 15px;
         display: flex;
         justify-content: flex-end;
         flex-direction: column;
@@ -27,6 +28,17 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        .c-title--underline {
+            top: 30px;
+            left: 30px;
+            @include breakpoint(tablet) {
+                top: 12px;
+                left: 11px;
+            }
+        }
+        .c-title--item {
+            margin-bottom: 3px;
+        }
     }
 
     &__eatin {
@@ -39,6 +51,17 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        .c-title--underline {
+            top: 30px;
+            left: 30px;
+            @include breakpoint(tablet) {
+                top: 12px;
+                left: 11px;
+            }
+        }
+        .c-title--item {
+            margin-bottom: 3px;
+        }
     }
 
     &__lists {
@@ -59,16 +82,14 @@
 }
 
 .p-branch-menu__items {
-    //display: flex;
     margin: 0 auto;
     flex-wrap: wrap;
     background-color: $background-text;
-    margin-bottom: 20px;
-    //max-width: 90%;
     height: auto;
     text-align: center;
-    padding: 1rem;
+    padding: 7px 10px 15px 10px;
     text-align: left;
     color: $text-item;
+    margin-bottom: 15px;
 }
 

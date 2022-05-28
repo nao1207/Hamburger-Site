@@ -1,16 +1,22 @@
 @use "../foundation/variable" as *;
 
 .l-header {
-    background-color: #FFF7EF;
+    background-color: $background-header;
     height: 217px;
+    .c-button--sidebar {
+        padding-top: 14px;
+        text-align: right;
+    }
 
     &__section {
         text-align: center;
+        .c-title--header {
+            margin-top: 0;
+            margin-bottom: 38px;
+        }
     }
-
     @include breakpoint(tablet) {
     }
-
     @include breakpoint(pc) {
         &__section {
             display: flex;
@@ -23,8 +29,10 @@
         object-fit: cover;
         grid-column: 1/2;
         grid-row: 1/2;
+        height: 217px;
     }
 }
+
 .l-header.open {
     @include breakpoint(tablet) {
         position: fixed;

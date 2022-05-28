@@ -10,11 +10,14 @@
     background-size: cover;
     background-position: center;
     
-    &__title {
-        color: $title-contents;
-        font-size: 2.25rem;
-        font-weight: bold;
-        padding-left: 1rem;
+    .c-title--main-visual {
+        padding-left: 25px;
+        @include breakpoint(tablet) {
+            padding-left: 5%;
+        }
+        @include breakpoint(pc) {
+            padding-left: 5%;
+        }
     }
     @include breakpoint(tablet) {
         background-image: url("../../mainvisual-img/mainvisual-pc@2x.jpg");

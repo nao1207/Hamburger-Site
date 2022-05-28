@@ -3,6 +3,9 @@
 .c-inner {
     margin: 0 16px;
     height: 217px;
+    @include breakpoint(tablet) {
+        margin: 0 26px;
+    }
     @include breakpoint(pc) {
         padding: 67px 65px;
     }

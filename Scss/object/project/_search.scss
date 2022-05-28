@@ -12,7 +12,7 @@
         background: url("../../../img/search.png");
         display: inline-block;
         position: absolute;
-        top: 11px;
+        top: 14px;
         left: 16px;
     }
     .p-search__box {
@@ -33,6 +33,7 @@
     border-radius: 10px;
     border: solid 1px $button-border;
     color: $text-search;
+    font-size: 1.6rem;
     font-weight: bold;
     background-color: $button-menu-background;
 }

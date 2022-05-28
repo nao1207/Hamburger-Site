@@ -7,21 +7,24 @@ component > _title.scss
 ------------------------------*/
 
 /*サイトタイトル*/
-.c-site__title {
+.c-title--header {
     color: $title-site;
-    font-size: 2.5rem;
-    margin-top: 0;
-    margin-bottom: 38px;
+    font-size: 4rem;
 }
 
 /*サイドバータイトル*/
-.c-title__sidebar {
-    font-size: 1.25rem;
+.c-title--sidebar {
+    font-size: 2.4rem;
     color: $title-sidebar;
     font-weight: bold;
 }
 
 /*各ページのトップ画像のタイトル*/
+.c-title--main-visual {
+    color: $title-section;
+    font-size: 3.6rem;
+    font-weight: bold;
+}
 
 .c-title {
     color: $title-contents;
@@ -33,10 +36,8 @@ component > _title.scss
 }
 .c-title--underline {
     color: $title-contents;
-    font-size: 2.5625rem;
+    font-size: 4.1rem;
     text-align: left;
-    left: 30px;
-    top: 30px;
     position: relative;
     display: inline-block;
     &::after {
@@ -52,32 +53,34 @@ component > _title.scss
     }
 }
 
+.c-title--item {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
 .c-title--underline__access {
     color: $title-contents;
-    font-size: 1.875rem;
+    font-size: 3rem;
     font-weight: bold;
     text-align: left;
-    padding: 3%;
+    padding-bottom: 3%;
     position: relative;
     display: inline-block;
-    @include breakpoint(tablet) {
-
-    }
     &::after {
         content: '';
         position: absolute;
         display: inline-block;
-        left: 3%;
+        left: 0;
         background-color: $title-contents;
         bottom: -12px;/*線の上下位置*/
         width: 70px;/*線の長さ*/
         height: 2px;/*線の太さ*/
         //transform: translateX(-50%);/*位置調整*/
         @include breakpoint(tablet) {
-            bottom: -4px;
+            bottom: -10px;
         }
         @include breakpoint(pc) {
-            bottom: -60px;
+            bottom: -50px;
         }
     }
 }
