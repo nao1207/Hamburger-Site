@@ -13,6 +13,8 @@
 
 html {
     font-size: 62.5%;
+    font-family: 'M PLUS 1', 'sans-serif';
+    font-weight: 400;
 }
 
 li {
@@ -25,7 +27,6 @@ a {
 
 body {
     width: 100%;
-    font-family: 'M PLUS 1', 'sans-serif';
     &.open {
         position: fixed;
     }

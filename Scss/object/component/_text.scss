@@ -14,8 +14,8 @@ object > component > text
 /*-----地図テキスト-----*/
 .c-text--access {
     color: $text-contents;
-    font-size: 1.6rem;
-    font-weight: bold;
+    font-size: 1.4rem;
+    font-weight: 700;
     line-height: 33px;
 }
 
@@ -27,14 +27,4 @@ object > component > text
     margin-left: 65px;
     margin-bottom: 23px;
     }
-}
-
-/*-----footerテキスト-----*/
-footer p {
-    color: $text-contents;
-    font-size: 1.25rem;
-}
-footer p .copy {
-    color: $text-contents;
-    font-size: 0.875rem;
 }

@@ -10,19 +10,23 @@
 
     &__section {
         text-align: center;
+        @include breakpoint(pc) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 67px;
+        }
         .c-title--header {
             margin-top: 0;
             margin-bottom: 38px;
+            @include breakpoint(pc) {
+                margin-bottom: 0;
+            }
         }
     }
     @include breakpoint(tablet) {
     }
     @include breakpoint(pc) {
-        &__section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
     }
     @include breakpoint(pc) {
         width: 100%;
