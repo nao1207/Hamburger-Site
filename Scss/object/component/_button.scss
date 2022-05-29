@@ -32,6 +32,7 @@ button {
         top: 25px;
         right: 17px;
         position: fixed;
+        transition: 0.5s;
     }
     @include breakpoint(pc) {
         display: none;

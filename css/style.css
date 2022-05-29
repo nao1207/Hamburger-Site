@@ -164,7 +164,6 @@ layout > _footer.scss
   width: 0;
   background-color: #F2EDE9;
   padding-top: 217px;
-  transition: 0.5s;
 }
 @media (min-width: 1025px) {
   .l-sidebar__section {
@@ -200,6 +199,7 @@ layout > _footer.scss
 .l-sidebar.open .l-sidebar__section {
   width: 87vw;
   right: 0;
+  transition: 0.5s;
 }
 @media (min-width: 600px) {
   .l-sidebar.open .l-sidebar__section {
@@ -305,6 +305,7 @@ button a {
   top: 25px;
   right: 17px;
   position: fixed;
+  transition: 0.5s;
 }
 @media (min-width: 1025px) {
   .c-sidebar__button--close {
