@@ -14,27 +14,37 @@
     z-index: 100;
     @include breakpoint(tablet) {
         width: 44vw;
+        .c-sidebar--title {
+            margin-left: 46px;
+            margin-top: 65px;
+            margin-bottom: 85px;
+        }
     }
     &__section {
         overflow-y: auto;
+        width: 100%;
         background-color: $background-sidebar;
-        /*.l-sidebar__content {
-            margin-left: 46px;
-            padding-top: 217px;
-            margin-bottom: 43px;
-            margin-left: 46px;
-            height: 100px;
-            .l-sidebar-main {
-                padding-bottom: 100%;
-                .c-title--sidebar {
-                    margin-bottom: 35px;
-                    padding-left: 46px;
+            .l-sidebar__content {
+                margin-top: 217px;
+                margin-bottom: 50%;
+                @include breakpoint(pc) {
+                    margin-left: 0px;
+                    margin-top: 0;
                 }
-                .l-sidebar-submenu li {
-                    margin-left: 30px;
+                .c-title--sidebar {
+                    margin-bottom: 40px;
+                    @include breakpoint(pc) {
+                        margin-left: -20px;
+                    }
+                }
+                .l-sidebar-submenu {
+                    margin-left: 20px;
+                    padding-bottom: 34px;
+                    @include breakpoint(pc) {
+                        margin-left: 0;
+                    }
                 }
             }
-        }*/
     }
     @include breakpoint(pc) {
         width: 100%;
@@ -51,23 +61,3 @@
     right: 0;
     position: block;
 }
-/*
-.l-sidebar {
-    //transition: .5s;
-    &.open {
-        //overflow-y: scroll;
-        //height: 100vh;//100vh表記にしないとドリンクまでスクロールできない
-        //z-index: 2;
-        right: 0;
-        padding-bottom: 50%;//サイドバーの下に余白を作れた
-        .l-sidebar__section {
-            width: 87vw;
-            right: 0;
-            //transition: 0.5s;//←ここに追加、閉じる時に無効になる
-            @include breakpoint(tablet) {
-                width: 44vw;
-            }
-        }
-    }
-}
-*/

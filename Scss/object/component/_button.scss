@@ -37,3 +37,13 @@ button {
         display: none;
     }
 }
+
+.c-sidebar--title {
+    display: none;
+    @include breakpoint(pc) {
+        display: block;
+        color: $title-sidebar;
+        font-size: 4rem;
+        font-weight: 700;
+    }
+}
