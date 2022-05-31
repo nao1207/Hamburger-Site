@@ -47,7 +47,7 @@ body.open {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 5;
   position: fixed;
   top: 0;
 }
@@ -153,20 +153,44 @@ layout > _footer.scss
 }
 
 .l-sidebar {
-  position: absolute;
   top: 0;
-  right: 0;
+  position: fixed;
+  right: -100%;
   height: 100%;
-  z-index: 2;
+  width: 87vw;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.5s;
+  z-index: 100;
+}
+@media (min-width: 600px) {
+  .l-sidebar {
+    width: 44vw;
+  }
 }
 .l-sidebar__section {
-  overflow: hidden;
-  width: 0;
+  overflow-y: auto;
   background-color: #F2EDE9;
-  padding-top: 217px;
+  /*.l-sidebar__content {
+      margin-left: 46px;
+      padding-top: 217px;
+      margin-bottom: 43px;
+      margin-left: 46px;
+      height: 100px;
+      .l-sidebar-main {
+          padding-bottom: 100%;
+          .c-title--sidebar {
+              margin-bottom: 35px;
+              padding-left: 46px;
+          }
+          .l-sidebar-submenu li {
+              margin-left: 30px;
+          }
+      }
+  }*/
 }
 @media (min-width: 1025px) {
-  .l-sidebar__section {
+  .l-sidebar {
     width: 100%;
   }
 }
@@ -178,35 +202,32 @@ layout > _footer.scss
     position: inherit;
   }
 }
-.l-sidebar__lists {
-  margin-bottom: 43px;
-}
-.l-sidebar__lists .c-title--sidebar {
-  margin-left: 46px;
-  margin-bottom: 40px;
-}
-.l-sidebar__lists .c-title--sidebar li {
-  margin-bottom: 23px;
-  margin-left: 66px;
-}
 
 .l-sidebar.open {
-  overflow-y: scroll;
-  height: 100vh;
-  z-index: 2;
-  padding-bottom: 50%;
-}
-.l-sidebar.open .l-sidebar__section {
-  width: 87vw;
   right: 0;
-  transition: 0.5s;
-}
-@media (min-width: 600px) {
-  .l-sidebar.open .l-sidebar__section {
-    width: 44vw;
-  }
+  position: block;
 }
 
+/*
+.l-sidebar {
+    //transition: .5s;
+    &.open {
+        //overflow-y: scroll;
+        //height: 100vh;//100vh表記にしないとドリンクまでスクロールできない
+        //z-index: 2;
+        right: 0;
+        padding-bottom: 50%;//サイドバーの下に余白を作れた
+        .l-sidebar__section {
+            width: 87vw;
+            right: 0;
+            //transition: 0.5s;//←ここに追加、閉じる時に無効になる
+            @include breakpoint(tablet) {
+                width: 44vw;
+            }
+        }
+    }
+}
+*/
 /*------------------------------
 component > _background.scss
 ------------------------------*/
@@ -229,18 +250,17 @@ component > _background.scss
 }
 
 /*----- archive -----*/
+/*
 .c-archive__main-visual {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 50%), url("../../mainvisual-img/page-title_archive@2x.jpg");
-  background-size: cover;
-  margin-bottom: 30px;
+    //background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) 50%),url("../../mainvisual-img/page-title_archive@2x.jpg");
+    background-size: cover;
+    margin-bottom: 30px;
+    @include breakpoint(tablet) {
+        //background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) 50%),url("../../mainvisual-img/page-title_archive.jpg");
+        margin-bottom: 36px;
+    }
 }
-@media (min-width: 600px) {
-  .c-archive__main-visual {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 50%), url("../../mainvisual-img/page-title_archive.jpg");
-    margin-bottom: 36px;
-  }
-}
-
+*/
 .c-contents--item__background {
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -285,7 +305,6 @@ button a {
   color: #707070;
   font-size: 2rem;
   cursor: pointer;
-  z-index: 3;
   font-size: 2rem;
   font-weight: 700;
 }
@@ -296,16 +315,10 @@ button a {
 }
 
 .c-sidebar__button--close {
-  display: none;
-}
-.c-sidebar__button--close.open {
-  display: block;
   cursor: pointer;
   position: absolute;
   top: 25px;
   right: 17px;
-  position: fixed;
-  transition: 0.5s;
 }
 @media (min-width: 1025px) {
   .c-sidebar__button--close {
@@ -328,7 +341,11 @@ object > component > text
 /*-----itemテキスト-----*/
 .c-text--item {
   font-size: 1.6rem;
-  font-weight: regular;
+}
+
+.c-text--description {
+  font-size: 1.6rem;
+  color: #3C2A10;
 }
 
 /*-----地図テキスト-----*/
@@ -454,7 +471,7 @@ component > _title.scss
 /*----- チーズバーガー -----*/
 .c-title__textline {
   color: #fff;
-  font-size: 2.5625rem;
+  font-size: 3.6rem;
   text-align: left;
   left: 30px;
   position: relative;
@@ -468,7 +485,7 @@ component > _title.scss
 }
 .c-title__textline::after {
   content: "チーズバーガー";
-  font-size: 1rem;
+  font-size: 1.6rem;
   position: absolute;
   display: inline-block;
   left: 0;
@@ -476,7 +493,7 @@ component > _title.scss
   /*線の上下位置*/
 }
 .c-description__title {
-  font-size: 1.75rem;
+  font-size: 2.8rem;
   color: #3C2A10;
 }
 
@@ -853,13 +870,12 @@ component > _title.scss
 }
 
 .u-grid {
-  position: relative;
   height: 100%;
 }
 @media (min-width: 1025px) {
   .u-grid {
     display: grid;
-    grid-template-columns: 80% minmax(260px, 1fr);
+    grid-template-columns: 80% minmax(260px, 20%);
     grid-template-rows: 217px 1fr 150px;
     grid-column-gap: 0px;
     grid-row-gap: 0px;

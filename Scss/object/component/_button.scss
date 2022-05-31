@@ -15,7 +15,6 @@ button {
     color: $title-sidebar;
     font-size: 2rem;
     cursor: pointer;
-    z-index: 3;
     font-size: 2rem;
     font-weight: 700;
     @include breakpoint(pc) {
@@ -24,16 +23,16 @@ button {
 }
 
 .c-sidebar__button--close {
-    display: none;
-    &.open {
-        display: block;
+    //display: none;
+    //&.open {
+        //display: block;
         cursor: pointer;
         position: absolute;
         top: 25px;
         right: 17px;
-        position: fixed;
-        transition: 0.5s;
-    }
+        //position: fixed;
+        //transition: 0.6s;
+    //}
     @include breakpoint(pc) {
         display: none;
     }

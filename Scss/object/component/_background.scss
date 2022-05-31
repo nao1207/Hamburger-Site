@@ -25,16 +25,17 @@ component > _background.scss
 }
 
 /*----- archive -----*/
+/*
 .c-archive__main-visual {
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) 50%),url("../../mainvisual-img/page-title_archive@2x.jpg");
+    //background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) 50%),url("../../mainvisual-img/page-title_archive@2x.jpg");
     background-size: cover;
     margin-bottom: 30px;
     @include breakpoint(tablet) {
-        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) 50%),url("../../mainvisual-img/page-title_archive.jpg");
+        //background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) 50%),url("../../mainvisual-img/page-title_archive.jpg");
         margin-bottom: 36px;
     }
 }
-
+*/
 .c-contents--item__background {
     background-color: $background-text;
 }

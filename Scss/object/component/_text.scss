@@ -8,7 +8,12 @@ object > component > text
 /*-----itemテキスト-----*/
 .c-text--item {
     font-size: 1.6rem;
-    font-weight: regular;
+    //font-weight: regular;
+}
+
+.c-text--description {
+    font-size: 1.6rem;
+    color: $text-item;
 }
 
 /*-----地図テキスト-----*/

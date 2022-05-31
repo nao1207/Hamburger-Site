@@ -13,12 +13,13 @@
     </head>
 
     <body>
+        <div class="main-watermark_bg"></div>
         <div class="u-grid">
             <header class="l-header">
                 <div class="c-inner">
-                    <h2 class="c-sidebar__button">Menu</h2>
+                    <h2 class="c-button--sidebar">Menu</h2>
                     <div class="l-header__section">
-                        <a href="index.html"><h1 class="c-site__title">Hamburger</h1></a>
+                        <a href="index.html"><h1 class="c-title--header">Hamburger</h1></a>
                         <form action="" class="p-search__form">
                         <input type="text" class="p-search__box">
                         <input type="submit" name="submit" class="p-search__button" value="検索">
@@ -29,12 +30,13 @@
 
             <main class="u-grid__main">
                 <div class="c-archive__main-visual c-main-visual">
+                    <img src="mainvisual-img/page-title_archive.jpg" alt="">
                     <h2 class="c-title__textline">Menu:</h2>
                 </div><!--.p-main-visual-->
 
                 <section class="p-archive-description">
                     <h3 class="c-description__title p-archive-description__title">小見出しが入ります</h3>
-                    <p>
+                    <p class="c-text--description">
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                     </p>
                 </section><!--.p-archive-description-->
@@ -42,9 +44,9 @@
                 <div class="p-archive__section">
                     <figure class="p-archive__card">
                         <img src="mainvisual-img/archive-menu-card.png" alt="">
-                        <figcaption class="p-archive__item">
-                            <div class="p-archive__item-text">
-                                <h2 class="p-archive__title c-section__title">チーズバーガー</h2>
+                        <figcaption class="c-item--archive__card">
+                            <div class="p-text--archive__card">
+                                <h2 class="c-title--archive__card">チーズバーガー</h2>
                                 <h3 class="p-archive__sub-title c-content__title">小見出しが入ります</h3>
                                 <p>
                                     テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
@@ -94,13 +96,14 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="script.js"></script>
     </body>
+
     <article class="l-sidebar">
         <div class="l-sidebar__section">
             <h2 class="c-sidebar__button--close"><img src="img/close.png" alt=""></h2>
             <ul class="l-sidebar__lists">
-                <h3 class="p-sidebar-items__title">バーガー</h3>
+                <h3 class="c-title--sidebar">バーガー</h3>
                 <li>ハンバーガー</li>
-                <li>チーズバーガー</li>
+                <a href="archive.html"><li>チーズバーガー</li></a>
                 <li>テリヤキバーガー</li>
                 <li>アボカドバーガー</li>
                 <li>フィッシュバーガー</li>
@@ -108,14 +111,14 @@
                 <li>チキンバーガー</li>
             </ul>
             <ul class="l-sidebar__lists">
-                <h3 class="p-sidebar-items__title">サイド</h3>
+                <h3 class="c-title--sidebar">サイド</h3>
                 <li>ポテト</li>
                 <li>サラダ</li>
                 <li>ナゲット</li>
                 <li>コーン</li>
             </ul>
             <ul class="l-sidebar__lists">
-                <h3 class="p-sidebar-items__title">ドリンク</h3>
+                <h3 class="c-title--sidebar">ドリンク</h3>
                 <li>コーラ</li>
                 <li>ファンタ</li>
                 <li>オレンジ</li>
