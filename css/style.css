@@ -167,10 +167,10 @@ layout > _footer.scss
   .l-sidebar {
     width: 44vw;
   }
-  .l-sidebar .c-sidebar--title {
+  .l-sidebar .c-title--main {
     margin-left: 46px;
     margin-top: 65px;
-    margin-bottom: 85px;
+    margin-bottom: 95px;
   }
 }
 .l-sidebar__section {
@@ -237,7 +237,7 @@ component > _background.scss
   margin-bottom: 20px;
 }
 
-.c-main-visual {
+.c-main-visual img {
   width: 100%;
   height: 285px;
   display: flex;
@@ -383,6 +383,18 @@ component > _title.scss
 }
 
 /*サイドバータイトル*/
+.c-title--main {
+  display: none;
+}
+@media (min-width: 1025px) {
+  .c-title--main {
+    display: block;
+    font-size: 3.4rem;
+    color: #707070;
+    font-weight: 700;
+  }
+}
+
 .c-title--sidebar {
   font-size: 2.4rem;
   color: #707070;

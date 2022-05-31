@@ -14,10 +14,10 @@
     z-index: 100;
     @include breakpoint(tablet) {
         width: 44vw;
-        .c-sidebar--title {
+        .c-title--main {
             margin-left: 46px;
             margin-top: 65px;
-            margin-bottom: 85px;
+            margin-bottom: 95px;
         }
     }
     &__section {

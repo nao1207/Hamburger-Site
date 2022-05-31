@@ -16,7 +16,7 @@ component > _background.scss
     margin-bottom: 20px;
 }
 
-.c-main-visual {
+.c-main-visual img{
     width: 100%;
     height: 285px;
     display: flex;
@@ -25,6 +25,7 @@ component > _background.scss
 }
 
 /*----- archive -----*/
+
 /*
 .c-archive__main-visual {
     //background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) 50%),url("../../mainvisual-img/page-title_archive@2x.jpg");

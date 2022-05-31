@@ -14,6 +14,15 @@ component > _title.scss
 }
 
 /*サイドバータイトル*/
+.c-title--main {
+    display: none;
+    @include breakpoint(pc) {
+        display: block;
+        font-size: 3.4rem;
+        color: $title-sidebar;
+        font-weight: 700;
+    }
+}
 .c-title--sidebar {
     font-size: 2.4rem;
     color: $title-sidebar;
