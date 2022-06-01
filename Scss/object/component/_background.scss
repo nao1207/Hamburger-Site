@@ -16,12 +16,20 @@ component > _background.scss
     margin-bottom: 20px;
 }
 
-.c-main-visual img{
+.c-main-visual {
     width: 100%;
-    height: 285px;
+    height: 283px;
     display: flex;
     align-items: center;
-    background-size: cover;
+    //background-size: cover;
+}
+
+.c-main-bg {
+    width: 100%;
+    height: 283px;
+    //align-items: center;
+    object-fit: cover;
+    filter: brightness(0.6);
 }
 
 /*----- archive -----*/

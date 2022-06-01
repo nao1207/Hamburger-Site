@@ -1,7 +1,6 @@
 @use "../../foundation/variable" as *;
 
 .u-grid {
-    //position: relative;
     height: 100%;//有効にするとサイドバー短くなる,途中から影響無し
     @include breakpoint(pc) {
         display: grid;
@@ -20,6 +19,8 @@
     }
 }
 
+/*
 .u-grid__shingle {
     padding: 0 20px;
 }
+*/

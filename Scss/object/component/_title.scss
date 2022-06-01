@@ -107,15 +107,16 @@ component > _title.scss
     margin-bottom: 3px;
 }
 
-/*----- チーズバーガー -----*/
-.c-title__textline {
+/*----- archive mainbgタイトル チーズバーガー -----*/
+.c-title--textline__bg {
     color: $title-contents;
     font-size: 3.6rem;
-    text-align: left;
+    //text-align: left;
     left: 30px;
     position: relative;
     display: inline-block;
     margin: 0;
+    width: 100%;
     @include breakpoint(tablet) {
         display: flex;
     }
@@ -126,14 +127,15 @@ component > _title.scss
         position: absolute;
         display: inline-block;
         left: 0;
-        bottom: -20px;/*線の上下位置*/
+        bottom: -30px;/*線の上下位置*/
         @include breakpoint(tablet) {
             //bottom: 15px;
         }
     }
 }
 
-.c-description__title {
+.c-title--description {
     font-size: 2.8rem;
     color: $title-item;
+    margin: 0;
 }

@@ -1,14 +1,22 @@
 @use "../../foundation/variable" as *;
 
+.p-main-visual--archive {
+    margin-bottom: 30px;
+    .c-main-bg {
+        position: relative;
+    }
+    .c-title--textline__bg {
+        position: absolute;
+        top: 65%;
+    }
+}
+
 .p-archive-description {
-    &__title {
-        margin: 0 auto 30px 22px;
+    .c-title--description {
+        margin-bottom: 30px;
     }
     @include breakpoint(tablet) {
         margin-bottom: 25px;
-    }
-    p {
-        margin: 20px;
     }
     @include breakpoint(tablet) {
         margin-right: 35px;
