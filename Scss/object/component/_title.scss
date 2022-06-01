@@ -6,15 +6,15 @@
 component > _title.scss
 ------------------------------*/
 
-/*サイトタイトル*/
+/*ヘッダー*/
 .c-title--header {
     color: $title-site;
     font-size: 4rem;
     font-weight: 700;
 }
 
-/*サイドバータイトル*/
-.c-title--main {
+/*サイドバー*/
+.c-title--sidebar {
     display: none;
     @include breakpoint(pc) {
         display: block;
@@ -23,7 +23,7 @@ component > _title.scss
         font-weight: 700;
     }
 }
-.c-title--sidebar {
+.c-title--sidebar--main-menu {
     font-size: 2.4rem;
     color: $title-sidebar;
     font-weight: bold;
@@ -136,10 +136,4 @@ component > _title.scss
 .c-description__title {
     font-size: 2.8rem;
     color: $title-item;
-}
-/*----- menuタイトル -----*/
-.c-title__sidebar {
-    font-size: 1.25rem;
-    margin-left: 45px;
-    margin-bottom: 80px;
 }

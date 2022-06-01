@@ -16,20 +16,20 @@ object > component > text
     color: $text-item;
 }
 
+/*-----サイドバーテキスト-----*/
+.c-text-sidebar--sub-menu {
+    & li {
+    color: $text-sidebar;
+    font-size: 2rem;
+    //margin-left: 65px;
+    //margin-bottom: 23px;
+    }
+}
+
 /*-----地図テキスト-----*/
 .c-text--access {
     color: $text-contents;
     font-size: 1.4rem;
     font-weight: 700;
     line-height: 33px;
-}
-
-/*-----サイドバーテキスト-----*/
-.l-sidebar__lists {
-    & li {
-    color: $text-sidebar;
-    font-size: 2rem;
-    margin-left: 65px;
-    margin-bottom: 23px;
-    }
 }

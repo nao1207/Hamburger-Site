@@ -8,43 +8,71 @@
     height: 100%;//100%表記にしないとデスクトップサイズになった時に下の余白が無くなる
     width: 87vw;
     display: flex;
-    //background-color: rgba(0,0,0,0.5);
     justify-content: space-between;
     transition: 0.5s;
     z-index: 100;
+    //background-color: rgba(0,0,0,0.5);
     @include breakpoint(tablet) {
         width: 44vw;
-        .c-title--main {
-            margin-left: 46px;
-            margin-top: 65px;
-            margin-bottom: 95px;
-        }
     }
     &__section {
         overflow-y: auto;
         width: 100%;
         background-color: $background-sidebar;
-            .l-sidebar__content {
-                margin-top: 217px;
-                margin-bottom: 50%;
+        @include breakpoint(pc) {
+            .c-title--sidebar {
                 @include breakpoint(pc) {
-                    margin-left: 0px;
-                    margin-top: 0;
+                    margin-top: 70px;
+                    margin-left: 46px;
+                    margin-bottom: 80px;
                 }
-                .c-title--sidebar {
+            }
+        }    
+    }
+    &__content {
+        margin-top: 212px;
+        margin-left: 46px;
+        @include breakpoint(pc) {
+            margin-top: 0;
+        }
+        .l-sidebar-lists {
+            .l-sidebar__lists--burger {
+                margin-bottom: 49px;
+                .c-title--sidebar--main-menu {
                     margin-bottom: 40px;
-                    @include breakpoint(pc) {
-                        margin-left: -20px;
-                    }
                 }
-                .l-sidebar-submenu {
-                    margin-left: 20px;
-                    padding-bottom: 34px;
-                    @include breakpoint(pc) {
-                        margin-left: 0;
+                .c-text-sidebar--sub-menu {
+                    padding-left: 20px;
+                    li {
+                        padding-bottom: 23px;
                     }
                 }
             }
+            .l-sidebar__lists--side-menu {
+                margin-bottom: 49px;
+                .c-title--sidebar--main-menu {
+                    margin-bottom: 40px;
+                }
+                .c-text-sidebar--sub-menu {
+                    padding-left: 20px;
+                    li {
+                        padding-bottom: 23px;
+                    }
+                }
+            }
+            .l-sidebar__lists--drink {
+                margin-bottom: 49px;
+                .c-title--sidebar--main-menu {
+                    margin-bottom: 40px;
+                }
+                .c-text-sidebar--sub-menu {
+                    padding-left: 20px;
+                    li {
+                        padding-bottom: 23px;
+                    }
+                }
+            }
+        }
     }
     @include breakpoint(pc) {
         width: 100%;

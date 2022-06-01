@@ -167,43 +167,63 @@ layout > _footer.scss
   .l-sidebar {
     width: 44vw;
   }
-  .l-sidebar .c-title--main {
-    margin-left: 46px;
-    margin-top: 65px;
-    margin-bottom: 95px;
-  }
 }
 .l-sidebar__section {
   overflow-y: auto;
   width: 100%;
   background-color: #F2EDE9;
 }
-.l-sidebar__section .l-sidebar__content {
-  margin-top: 217px;
-  margin-bottom: 50%;
+@media (min-width: 1025px) and (min-width: 1025px) {
+  .l-sidebar__section .c-title--sidebar {
+    margin-top: 70px;
+    margin-left: 46px;
+    margin-bottom: 80px;
+  }
+}
+.l-sidebar__content {
+  margin-top: 212px;
+  margin-left: 46px;
 }
 @media (min-width: 1025px) {
-  .l-sidebar__section .l-sidebar__content {
-    margin-left: 0px;
+  .l-sidebar__content {
     margin-top: 0;
   }
 }
-.l-sidebar__section .l-sidebar__content .c-title--sidebar {
+.l-sidebar__content .l-sidebar-lists .l-sidebar__lists--burger {
+  margin-bottom: 49px;
+}
+.l-sidebar__content .l-sidebar-lists .l-sidebar__lists--burger .c-title--sidebar--main-menu {
   margin-bottom: 40px;
 }
-@media (min-width: 1025px) {
-  .l-sidebar__section .l-sidebar__content .c-title--sidebar {
-    margin-left: -20px;
-  }
+.l-sidebar__content .l-sidebar-lists .l-sidebar__lists--burger .c-text-sidebar--sub-menu {
+  padding-left: 20px;
 }
-.l-sidebar__section .l-sidebar__content .l-sidebar-submenu {
-  margin-left: 20px;
-  padding-bottom: 34px;
+.l-sidebar__content .l-sidebar-lists .l-sidebar__lists--burger .c-text-sidebar--sub-menu li {
+  padding-bottom: 23px;
 }
-@media (min-width: 1025px) {
-  .l-sidebar__section .l-sidebar__content .l-sidebar-submenu {
-    margin-left: 0;
-  }
+.l-sidebar__content .l-sidebar-lists .l-sidebar__lists--side-menu {
+  margin-bottom: 49px;
+}
+.l-sidebar__content .l-sidebar-lists .l-sidebar__lists--side-menu .c-title--sidebar--main-menu {
+  margin-bottom: 40px;
+}
+.l-sidebar__content .l-sidebar-lists .l-sidebar__lists--side-menu .c-text-sidebar--sub-menu {
+  padding-left: 20px;
+}
+.l-sidebar__content .l-sidebar-lists .l-sidebar__lists--side-menu .c-text-sidebar--sub-menu li {
+  padding-bottom: 23px;
+}
+.l-sidebar__content .l-sidebar-lists .l-sidebar__lists--drink {
+  margin-bottom: 49px;
+}
+.l-sidebar__content .l-sidebar-lists .l-sidebar__lists--drink .c-title--sidebar--main-menu {
+  margin-bottom: 40px;
+}
+.l-sidebar__content .l-sidebar-lists .l-sidebar__lists--drink .c-text-sidebar--sub-menu {
+  padding-left: 20px;
+}
+.l-sidebar__content .l-sidebar-lists .l-sidebar__lists--drink .c-text-sidebar--sub-menu li {
+  padding-bottom: 23px;
 }
 @media (min-width: 1025px) {
   .l-sidebar {
@@ -356,6 +376,12 @@ object > component > text
   color: #3C2A10;
 }
 
+/*-----サイドバーテキスト-----*/
+.c-text-sidebar--sub-menu li {
+  color: #707070;
+  font-size: 2rem;
+}
+
 /*-----地図テキスト-----*/
 .c-text--access {
   color: #fff;
@@ -364,30 +390,22 @@ object > component > text
   line-height: 33px;
 }
 
-/*-----サイドバーテキスト-----*/
-.l-sidebar__lists li {
-  color: #707070;
-  font-size: 2rem;
-  margin-left: 65px;
-  margin-bottom: 23px;
-}
-
 /*------------------------------
 component > _title.scss
 ------------------------------*/
-/*サイトタイトル*/
+/*ヘッダー*/
 .c-title--header {
   color: #707070;
   font-size: 4rem;
   font-weight: 700;
 }
 
-/*サイドバータイトル*/
-.c-title--main {
+/*サイドバー*/
+.c-title--sidebar {
   display: none;
 }
 @media (min-width: 1025px) {
-  .c-title--main {
+  .c-title--sidebar {
     display: block;
     font-size: 3.4rem;
     color: #707070;
@@ -395,7 +413,7 @@ component > _title.scss
   }
 }
 
-.c-title--sidebar {
+.c-title--sidebar--main-menu {
   font-size: 2.4rem;
   color: #707070;
   font-weight: bold;
@@ -515,13 +533,6 @@ component > _title.scss
 .c-description__title {
   font-size: 2.8rem;
   color: #3C2A10;
-}
-
-/*----- menuタイトル -----*/
-.c-title__sidebar {
-  font-size: 1.25rem;
-  margin-left: 45px;
-  margin-bottom: 80px;
 }
 
 .p-access {

@@ -18,12 +18,7 @@ $(window).on('load resize',function(){
         $('body.open').removeClass('open');
     }
 });
-/*
-$(function(){
-if((window.matchMedia('(min-width:1025px)').matches))&&($('.main-watermark_bg').hasClass('open'));
-    $('.main-watermark_bg.open').removeClass('open');
 
-});
 /*
 $(function(){
     $('.c-button--sidebar').click(function(){
