@@ -317,10 +317,12 @@ component > _background.scss
 button {
   background-color: #fff;
   border-radius: 24px;
+  padding: 10px 42px;
 }
 button a {
   color: #707070;
-  font-weight: bold;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .c-button--sidebar {
@@ -370,7 +372,17 @@ button a {
   }
 }
 .c-inner-archive {
-  margin: 0 22px;
+  margin: 0 20px;
+}
+@media (min-width: 600px) {
+  .c-inner-archive {
+    margin: 0 42px;
+  }
+}
+@media (min-width: 1025px) {
+  .c-inner-archive {
+    margin: 0 100px;
+  }
 }
 
 /*------------------------------
@@ -400,6 +412,13 @@ object > component > text
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 33px;
+}
+
+/*-----archiveテキスト-----*/
+.c-text-archive__card {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 23px;
 }
 
 /*------------------------------
@@ -548,6 +567,18 @@ component > _title.scss
   margin: 0;
 }
 
+.c-title--archive__card {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.c-sub-title--archive__card {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
 .p-access {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.29) 50%), url("../../../mainvisual-img/map.png");
   background-size: cover;
@@ -627,7 +658,7 @@ component > _title.scss
 }
 .p-main-visual--archive .c-title--textline__bg {
   position: absolute;
-  top: 65%;
+  top: 35%;
 }
 
 .p-archive-description .c-title--description {
@@ -669,7 +700,10 @@ component > _title.scss
 .p-archive__card {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin-bottom: 20px;
+}
+.p-archive__card img {
+  object-fit: cover;
 }
 @media (min-width: 600px) {
   .p-archive__card {
@@ -682,39 +716,78 @@ component > _title.scss
 }
 @media (min-width: 1025px) {
   .p-archive__card {
-    margin: 30px;
+    margin-bottom: 30px;
   }
 }
+
 .p-archive__item {
   background-color: #3C2B1C;
-  color: #fff;
   text-align: center;
-}
-.p-archive__item p {
-  padding-right: 20%;
 }
 .p-archive__item-text {
   text-align: left;
-  padding-left: 17px;
-}
-.p-archive__item-text .p-archive__title {
-  font-size: 1.25rem;
-  margin: 24px 0;
-}
-.p-archive__item-text .p-archive__sub-title {
-  margin-bottom: 10px;
+  margin: 31.5px 73.1px 0 17px;
+  height: auto;
 }
 @media (min-width: 600px) {
-  .p-archive__item {
-    width: 50%;
+  .p-archive__item-text {
+    margin: 30px 59px 0 34.7px;
   }
 }
+@media (min-width: 1025px) {
+  .p-archive__item-text {
+    margin: 53px 104px 0 63px;
+  }
+}
+.p-archive__item-text .c-title--archive__card {
+  margin-bottom: 24px;
+}
+.p-archive__item-text .c-sub-title--archive__card {
+  margin-bottom: 10px;
+}
 .p-archive__item button {
-  color: #fff;
-  padding: 10px 42px;
-  margin: 43.7px 93px 43.7px 79.9px;
+  margin: 40px;
+}
+@media (min-width: 600px) {
+  .p-archive__item button {
+    margin: 45px;
+  }
+}
+@media (min-width: 1025px) {
+  .p-archive__item button {
+    margin: 60px;
+  }
 }
 
+/*
+.p-archive__item {
+    background-color: $background-card;
+    text-align: center;
+    p {
+        padding-right: 20%;
+    }
+    &-text {
+        text-align: left;
+        padding-left: 17px;
+        .p-archive__title {
+            font-size: 1.25rem;
+            margin: 24px 0;
+        }
+        .p-archive__sub-title {
+            margin-bottom: 10px;
+        }
+    }
+    @include breakpoint(tablet) {
+        width: 50%;
+    }
+
+    button {
+        color: $text-card;
+        padding: 10px 42px;
+        margin: 43.7px 93px 43.7px 79.9px;
+    }
+}
+*/
 .p-take-out__item {
   text-align: left;
 }

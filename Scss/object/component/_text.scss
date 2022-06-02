@@ -35,3 +35,10 @@ object > component > text
     font-weight: 700;
     line-height: 33px;
 }
+
+/*-----archiveテキスト-----*/
+.c-text-archive__card {
+    color: $text-card;
+    font-size: 1.6rem;
+    line-height: 23px;
+}

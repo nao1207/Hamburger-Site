@@ -7,7 +7,7 @@
     }
     .c-title--textline__bg {
         position: absolute;
-        top: 65%;
+        top: 35%;
     }
 }
 
@@ -44,7 +44,10 @@
     &__card {
         display: flex;
         flex-direction: column;
-        margin: 20px;
+        margin-bottom: 20px;
+        img {
+            object-fit: cover;
+        }
         @include breakpoint(tablet) {
             flex-direction: row;
             img {
@@ -53,35 +56,67 @@
             }
         }
         @include breakpoint(pc) {
-            margin: 30px;
-        }
-    }
-    &__item {
-        background-color: $background-card;
-        color: $text-card;
-        text-align: center;
-        p {
-            padding-right: 20%;
-        }
-        &-text {
-            text-align: left;
-            padding-left: 17px;
-            .p-archive__title {
-                font-size: 1.25rem;
-                margin: 24px 0;
-            }
-            .p-archive__sub-title {
-                margin-bottom: 10px;
-            }
-        }
-        @include breakpoint(tablet) {
-            width: 50%;
-        }
-
-        button {
-            color: $text-card;
-            padding: 10px 42px;
-            margin: 43.7px 93px 43.7px 79.9px;
+            margin-bottom: 30px;
         }
     }
 }
+
+.p-archive__item  {
+    background-color: $background-card;
+    text-align: center;
+    &-text {
+        text-align: left;
+        margin: 31.5px 73.1px 0 17px;
+        height: auto;
+        @include breakpoint(tablet) {
+            margin: 30px 59px 0 34.7px;
+        }
+        @include breakpoint(pc) {
+            margin: 53px 104px 0 63px;
+        }
+        .c-title--archive__card {
+            margin-bottom: 24px;
+        }
+        .c-sub-title--archive__card {
+            margin-bottom: 10px;
+        }
+    }
+    button {
+        margin: 40px;
+        @include breakpoint(tablet) {
+            margin: 45px;
+        }
+        @include breakpoint(pc) {
+            margin: 60px;
+        }
+    }
+}
+/*
+.p-archive__item {
+    background-color: $background-card;
+    text-align: center;
+    p {
+        padding-right: 20%;
+    }
+    &-text {
+        text-align: left;
+        padding-left: 17px;
+        .p-archive__title {
+            font-size: 1.25rem;
+            margin: 24px 0;
+        }
+        .p-archive__sub-title {
+            margin-bottom: 10px;
+        }
+    }
+    @include breakpoint(tablet) {
+        width: 50%;
+    }
+
+    button {
+        color: $text-card;
+        padding: 10px 42px;
+        margin: 43.7px 93px 43.7px 79.9px;
+    }
+}
+*/

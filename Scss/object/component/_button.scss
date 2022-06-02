@@ -5,9 +5,11 @@
 button {
     background-color: $button-card-background;
     border-radius: 24px;
+    padding: 10px 42px;
     a {
         color: $text-card-button;
-        font-weight: bold;
+        font-size: 1.6rem;
+        font-weight: 700;
     }
 }
 

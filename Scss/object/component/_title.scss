@@ -139,3 +139,15 @@ component > _title.scss
     color: $title-item;
     margin: 0;
 }
+
+.c-title--archive__card {
+    color: $title-section;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.c-sub-title--archive__card {
+    color: $title-contents;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
