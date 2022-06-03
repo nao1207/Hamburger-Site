@@ -8,20 +8,25 @@
     .c-title--textline__bg {
         position: absolute;
         top: 35%;
+        @include breakpoint(tablet) {
+            margin-left: 66px;
+        }
+        @include breakpoint(pc) {
+            margin-left: 86px;
+        }
     }
 }
 
 .p-archive-description {
+    margin-bottom: 19px;
     .c-title--description {
         margin-bottom: 30px;
     }
-    @include breakpoint(tablet) {
-        margin-bottom: 25px;
+    .c-text--description {
+        flex-wrap: wrap;
     }
     @include breakpoint(tablet) {
-        margin-right: 35px;
-        margin-bottom: 37px;
-        margin-left: 42px;
+        margin-bottom: 25px;
     }
 }
 
@@ -35,16 +40,13 @@
             margin-bottom: 249px;
         }
     }
-    @include breakpoint(tablet) {
-        margin-right: 35px;
-        margin-left: 35px;
-    }
 }
 .p-archive {
     &__card {
         display: flex;
         flex-direction: column;
         margin-bottom: 20px;
+        width: 100%;
         img {
             object-fit: cover;
         }
@@ -52,11 +54,15 @@
             flex-direction: row;
             img {
                 width: 50%;
+                height: auto;
                 background-size: cover;
             }
         }
         @include breakpoint(pc) {
             margin-bottom: 30px;
+            img {
+                width: 50%;
+            }
         }
     }
 }
@@ -64,6 +70,10 @@
 .p-archive__item  {
     background-color: $background-card;
     text-align: center;
+    flex-wrap: wrap;
+    @include breakpoint(tablet) {
+        width: 50%;
+    }
     &-text {
         text-align: left;
         margin: 31.5px 73.1px 0 17px;
@@ -91,32 +101,3 @@
         }
     }
 }
-/*
-.p-archive__item {
-    background-color: $background-card;
-    text-align: center;
-    p {
-        padding-right: 20%;
-    }
-    &-text {
-        text-align: left;
-        padding-left: 17px;
-        .p-archive__title {
-            font-size: 1.25rem;
-            margin: 24px 0;
-        }
-        .p-archive__sub-title {
-            margin-bottom: 10px;
-        }
-    }
-    @include breakpoint(tablet) {
-        width: 50%;
-    }
-
-    button {
-        color: $text-card;
-        padding: 10px 42px;
-        margin: 43.7px 93px 43.7px 79.9px;
-    }
-}
-*/

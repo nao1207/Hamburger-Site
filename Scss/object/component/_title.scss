@@ -110,8 +110,8 @@ component > _title.scss
 /*----- archive mainbgタイトル チーズバーガー -----*/
 .c-title--textline__bg {
     color: $title-contents;
-    font-size: 3.6rem;
-    //text-align: left;
+    font-size: 6rem;
+    font-weight: 700;
     left: 30px;
     position: relative;
     display: inline-block;
@@ -124,12 +124,14 @@ component > _title.scss
     &::after {
         content: 'チーズバーガー';
         font-size: 1.6rem;
+        font-weight: 700;
         position: absolute;
         display: inline-block;
         left: 0;
         bottom: -30px;/*線の上下位置*/
         @include breakpoint(tablet) {
-            //bottom: 15px;
+            bottom: 20px;
+            left: 200px;
         }
     }
 }

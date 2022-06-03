@@ -372,16 +372,16 @@ button a {
   }
 }
 .c-inner-archive {
-  margin: 0 20px;
+  margin: 0 5.8%;
 }
 @media (min-width: 600px) {
   .c-inner-archive {
-    margin: 0 42px;
+    margin: 0 5%;
   }
 }
 @media (min-width: 1025px) {
   .c-inner-archive {
-    margin: 0 100px;
+    margin: 0 5.2%;
   }
 }
 
@@ -540,7 +540,8 @@ component > _title.scss
 /*----- archive mainbgタイトル チーズバーガー -----*/
 .c-title--textline__bg {
   color: #fff;
-  font-size: 3.6rem;
+  font-size: 6rem;
+  font-weight: 700;
   left: 30px;
   position: relative;
   display: inline-block;
@@ -555,12 +556,20 @@ component > _title.scss
 .c-title--textline__bg::after {
   content: "チーズバーガー";
   font-size: 1.6rem;
+  font-weight: 700;
   position: absolute;
   display: inline-block;
   left: 0;
   bottom: -30px;
   /*線の上下位置*/
 }
+@media (min-width: 600px) {
+  .c-title--textline__bg::after {
+    bottom: 20px;
+    left: 200px;
+  }
+}
+
 .c-title--description {
   font-size: 2.8rem;
   color: #3C2A10;
@@ -660,20 +669,29 @@ component > _title.scss
   position: absolute;
   top: 35%;
 }
+@media (min-width: 600px) {
+  .p-main-visual--archive .c-title--textline__bg {
+    margin-left: 66px;
+  }
+}
+@media (min-width: 1025px) {
+  .p-main-visual--archive .c-title--textline__bg {
+    margin-left: 86px;
+  }
+}
 
+.p-archive-description {
+  margin-bottom: 19px;
+}
 .p-archive-description .c-title--description {
   margin-bottom: 30px;
+}
+.p-archive-description .c-text--description {
+  flex-wrap: wrap;
 }
 @media (min-width: 600px) {
   .p-archive-description {
     margin-bottom: 25px;
-  }
-}
-@media (min-width: 600px) {
-  .p-archive-description {
-    margin-right: 35px;
-    margin-bottom: 37px;
-    margin-left: 42px;
   }
 }
 
@@ -690,17 +708,12 @@ component > _title.scss
     margin-bottom: 249px;
   }
 }
-@media (min-width: 600px) {
-  .p-archive__section {
-    margin-right: 35px;
-    margin-left: 35px;
-  }
-}
 
 .p-archive__card {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+  width: 100%;
 }
 .p-archive__card img {
   object-fit: cover;
@@ -711,6 +724,7 @@ component > _title.scss
   }
   .p-archive__card img {
     width: 50%;
+    height: auto;
     background-size: cover;
   }
 }
@@ -718,11 +732,20 @@ component > _title.scss
   .p-archive__card {
     margin-bottom: 30px;
   }
+  .p-archive__card img {
+    width: 50%;
+  }
 }
 
 .p-archive__item {
   background-color: #3C2B1C;
   text-align: center;
+  flex-wrap: wrap;
+}
+@media (min-width: 600px) {
+  .p-archive__item {
+    width: 50%;
+  }
 }
 .p-archive__item-text {
   text-align: left;
@@ -759,35 +782,6 @@ component > _title.scss
   }
 }
 
-/*
-.p-archive__item {
-    background-color: $background-card;
-    text-align: center;
-    p {
-        padding-right: 20%;
-    }
-    &-text {
-        text-align: left;
-        padding-left: 17px;
-        .p-archive__title {
-            font-size: 1.25rem;
-            margin: 24px 0;
-        }
-        .p-archive__sub-title {
-            margin-bottom: 10px;
-        }
-    }
-    @include breakpoint(tablet) {
-        width: 50%;
-    }
-
-    button {
-        color: $text-card;
-        padding: 10px 42px;
-        margin: 43.7px 93px 43.7px 79.9px;
-    }
-}
-*/
 .p-take-out__item {
   text-align: left;
 }
