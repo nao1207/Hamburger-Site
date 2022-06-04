@@ -153,3 +153,32 @@ component > _title.scss
     font-size: 1.6rem;
     font-weight: 700;
 }
+
+/*----- archive-search mainbgタイトル チーズバーガー -----*/
+.c-title--textline__bg--search {
+    color: $title-contents;
+    font-size: 6rem;
+    font-weight: 700;
+    left: 30px;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+    @include breakpoint(tablet) {
+        display: flex;
+    }
+
+    &::after {
+        content: 'チーズバーガー';
+        font-size: 1.6rem;
+        font-weight: 700;
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        bottom: -30px;/*線の上下位置*/
+        @include breakpoint(tablet) {
+            bottom: 20px;
+            left: 230px;
+        }
+    }
+}

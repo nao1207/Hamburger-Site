@@ -588,6 +588,39 @@ component > _title.scss
   font-weight: 700;
 }
 
+/*----- archive-search mainbgタイトル チーズバーガー -----*/
+.c-title--textline__bg--search {
+  color: #fff;
+  font-size: 6rem;
+  font-weight: 700;
+  left: 30px;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+}
+@media (min-width: 600px) {
+  .c-title--textline__bg--search {
+    display: flex;
+  }
+}
+.c-title--textline__bg--search::after {
+  content: "チーズバーガー";
+  font-size: 1.6rem;
+  font-weight: 700;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  bottom: -30px;
+  /*線の上下位置*/
+}
+@media (min-width: 600px) {
+  .c-title--textline__bg--search::after {
+    bottom: 20px;
+    left: 230px;
+  }
+}
+
 .p-access {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.29) 50%), url("../../../mainvisual-img/map.png");
   background-size: cover;
@@ -636,29 +669,27 @@ component > _title.scss
   }
 }
 
-.p-archive-search__main-visual .c-title__textline {
-  color: #fff;
-  font-size: 2.5625rem;
-  text-align: left;
-  left: 30px;
+.p-main-visual--archive-search {
+  margin-bottom: 30px;
+}
+.p-main-visual--archive-search .c-main-bg {
   position: relative;
-  display: inline-block;
-  margin: 0;
+}
+.p-main-visual--archive-search .c-title--textline__bg--search {
+  position: absolute;
+  top: 33%;
 }
 @media (min-width: 600px) {
-  .p-archive-search__main-visual .c-title__textline {
-    display: flex;
+  .p-main-visual--archive-search .c-title--textline__bg--search {
+    margin-left: 66px;
   }
 }
-.p-archive-search__main-visual .c-title__textline::after {
-  content: "チーズバーガー";
-  font-size: 1rem;
-  position: absolute;
-  display: inline-block;
-  left: 0;
-  bottom: -20px;
-  /*線の上下位置*/
+@media (min-width: 1025px) {
+  .p-main-visual--archive-search .c-title--textline__bg--search {
+    margin-left: 86px;
+  }
 }
+
 .p-main-visual--archive {
   margin-bottom: 30px;
 }
@@ -667,7 +698,7 @@ component > _title.scss
 }
 .p-main-visual--archive .c-title--textline__bg {
   position: absolute;
-  top: 35%;
+  top: 33%;
 }
 @media (min-width: 600px) {
   .p-main-visual--archive .c-title--textline__bg {
