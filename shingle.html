@@ -4,8 +4,13 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- style.css -->
+        <!-- リセットcss -->
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <!-- Googlefont -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <!-- style.css -->
         <link rel="stylesheet" href="css/style.css">
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -13,12 +18,13 @@
     </head>
 
     <body>
+        <div class="main-watermark_bg"></div>
         <div class="u-grid">
             <header class="l-header">
                 <div class="c-inner">
-                    <h2 class="c-sidebar__button">Menu</h2>
+                    <h2 class="c-button--sidebar">Menu</h2>
                     <div class="l-header__section">
-                        <a href="index.html"><h1 class="c-site__title">Hamburger</h1></a>
+                        <a href="index.html"><h1 class="c-title--header">Hamburger</h1></a>
                         <form action="" class="p-search__form">
                         <input type="text" class="p-search__box">
                         <input type="submit" name="submit" class="p-search__button" value="検索">
@@ -29,94 +35,173 @@
 
             <main class="u-grid__main">
                 <div class="p-shingle__main-visual c-main-visual u-grid__shingle">
-                    <h1 class="c-title">h1 チーズバーガー</h2>
+                    <img class="c-main-bg--shingle" src="mainvisual-img/page-title_shingle.png" alt="">
+                    <h1 class="c-title--main-visual">h1 チーズバーガー</h1>
                 </div><!--.p-main-visual-->
 
-                <section class="p-shingle-description u-grid__shingle">
-                    <h2 class="c-description__title p-shingle-description__title">見出しh2</h2>
-                    <p>
-                        Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。
+                <section class="p-description c-inner-archive">
+                    <h2 class="c-title2--description">見出しh2</h2>
+                    <p class="c-text--description">
+                        Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。
+                        Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。
+                        Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。
+                        Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。
+                        Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。
+                        Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。
                     </p>
-                    <h3 class="c-title-color p-shingle-description__title">見出しh3</h3>
-                    <h4 class="c-title-color p-shingle-description__title">見出しh4</h4>
-                    <h5 class="c-title-color p-shingle-description__title">見出しh5</h5>
-                    <h6 class="c-title-color p-shingle-description__title">見出しh6</h6>
-                    <p>
-                        
-                    </p>
+                    <h3 class="c-title3--description">見出しh3</h3>
+                    <h4 class="c-title4--description">見出しh4</h4>
+                    <h5 class="c-title5--description">見出しh5</h5>
+                    <h6 class="c-title6--description">見出しh6</h6>
                 </section><!--.p-archive-description-->
                 
-                <div class="p-archive__section">
-                    <figure class="p-archive__card">
-                        <img src="mainvisual-img/archive-menu-card.png" alt="">
-                        <figcaption class="p-archive__item">
-                            <div class="p-archive__item-text">
-                                <h2 class="p-archive__title c-section__title">見出しが入ります</h2>
-                                <h3 class="p-archive__sub-title c-content__title">小見出しが入ります</h3>
-                                <p>
-                                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                </p>
-                            </div><!--.p-archive__text-->
-                            <button><a href="">詳しく見る</a></button>
-                        </figcaption>
-                    </figure>
+                <blockquote class="p-description-blockquote c-inner-archive">
+                    <div class="c-text-blockquote">
+                        "Blockquote 引用タグ引用タグ引用タグ引用タグ引用タグ
+                        引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ
+                        引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ
+                        引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ
+                        引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ
+                        引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ
+                        引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ
+                        引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ
+                        引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ
+                        引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ
+                        引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ
+                        引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ
+                        引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ
+                        引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ
+                        引用タグ引用タグ"
+                        <p class="c-text-blockquote__reference-source">
+                            出典元: <a href="">◯ ◯ ◯ ◯ ◯ ◯ ◯ ◯ ◯ ◯</a>
+                        </p>
+                    </div>
+                </blockquote>
 
-                    <figure class="p-archive__card">
-                        <img src="mainvisual-img/archive-menu-card.png" alt="">
-                        <figcaption class="p-archive__item">
-                            <div class="p-archive__item-text">
-                                <h2 class="p-archive__title c-section__title">見出しが入ります</h2>
-                                <h3 class="p-archive__sub-title c-content__title">小見出しが入ります</h3>
-                                <p>
-                                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                </p>
-                            </div><!--.p-archive__text-->
-                            <button><a href="">詳しく見る</a></button>
-                        </figcaption>
-                    </figure>
+                <div class="c-shingle__big-img c-inner-archive">
+                    <img src="img/cooked-foods-750073-2.png" alt="">
+                </div>
+                
+                <div class="p-shingle-section">
+                    <div class="p-shingle-content c-inner-archive">
+                        <img src="img/cooked-foods-750073-2.png" alt="">
+                        <p class="c-text--shingle-section"> 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります
+                        </p>
+                    </div>
+                    <div class="p-shingle-content c-inner-archive">
+                        <img src="img/cooked-foods-750073-2.png" alt="">
+                        <p class="c-text--shingle-section"> 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります テキストが入ります 
+                            テキストが入ります テキストが入ります
+                        </p>
+                    </div>
+                </div><!--.p-shingle-section-->
 
-                    <figure class="p-archive__card">
-                        <img src="mainvisual-img/archive-menu-card.png" alt="">
-                        <figcaption class="p-archive__item">
-                            <div class="p-archive__item-text">
-                                <h2 class="p-archive__title c-section__title">見出しが入ります</h2>
-                                <h3 class="p-archive__sub-title c-content__title">小見出しが入ります</h3>
-                                <p>
-                                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                </p>
-                            </div><!--.p-archive__text-->
-                            <button><a href="">詳しく見る</a></button>
-                        </figcaption>
-                    </figure>
+                <div class="p-shingle--insertion-image">
+                    <div class="p-shingle--insertion-image--small c-inner-archive">
+                        <img src="img/cooked-foods-750073-2.png" alt="">
+                    </div>
+                    <div class="p-shingle--insertion-image--big c-inner-archive">
+                        <img src="img/cooked-foods-750073-2.png" alt="">
+                        <img src="img/cooked-foods-750073-2.png" alt="">
+                        <img src="img/cooked-foods-750073-2.png" alt="">
+                        <img src="img/cooked-foods-750073-2.png" alt="">
+                        <img src="img/cooked-foods-750073-2.png" alt="">
+                        <img src="img/cooked-foods-750073-2.png" alt="">
+                        <img src="img/cooked-foods-750073-2.png" alt="">
+                        <img src="img/cooked-foods-750073-2.png" alt="">
+                    </div>
+                </div><!--.p-shingle--insertion_image-->
+                
+                <div class="p-shingle-lists-section c-inner-archive">
+                    <div class="p-shingle-lists c-text-shingle-lists">
+                        <ol class="p-shingle-list">
+                            <li class="p-shingle-list-item">
+                                リストリストリスト
+                            </li>
+                            <li class="p-shingle-list-item">
+                                リストリストリスト
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="p-shingle-lists c-text-shingle-lists">
+                        <ol class="p-shingle-list">
+                            <li class="p-shingle-list-item">
+                                リスト2リスト2リスト2
+                            </li>
+                            <li class="p-shingle-list-item">
+                                リスト2リスト2リスト2
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="p-shingle-lists c-text-shingle-lists">
+                        <ol class="p-shingle-list">
+                            <li class="p-shingle-list-item">
+                                リストリストリスト
+                            </li>
+                            <li class="p-shingle-list-item">
+                                リストリストリスト
+                            </li>
+                        </ol>
+                    </div>
+                </div><!--.p-shingle-lists-section-->
 
-                    <figure class="p-archive__card">
-                        <img src="mainvisual-img/archive-menu-card.png" alt="">
-                        <figcaption class="p-archive__item">
-                            <div class="p-archive__item-text">
-                                <h2 class="p-archive__title c-section__title">見出しが入ります</h2>
-                                <h3 class="p-archive__sub-title c-content__title">小見出しが入ります</h3>
-                                <p>
-                                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                </p>
-                            </div><!--.p-archive__text-->
-                            <button><a href="">詳しく見る</a></button>
-                        </figcaption>
-                    </figure>
-
-                    <figure class="p-archive__card">
-                        <img src="mainvisual-img/archive-menu-card.png" alt="">
-                        <figcaption class="p-archive__item">
-                            <div class="p-archive__item-text">
-                                <h2 class="p-archive__title c-section__title">見出しが入ります</h2>
-                                <h3 class="p-archive__sub-title c-content__title">小見出しが入ります</h3>
-                                <p>
-                                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                </p>
-                            </div><!--.p-archive__text-->
-                            <button><a href="">詳しく見る</a></button>
-                        </figcaption>
-                    </figure>
-                </div><!--.p-archive__section-->
+                <div class="p-shingle-lists-section c-inner-archive">
+                    <div class="p-shingle-lists c-text-shingle-lists">
+                        <ol class="p-shingle-list">
+                            <li class="p-shingle-list-item">
+                                リストリストリスト
+                            </li>
+                            <li class="p-shingle-list-item">
+                                リストリストリスト
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="p-shingle-lists c-text-shingle-lists">
+                        <ol class="p-shingle-list">
+                            <li class="p-shingle-list-item">
+                                リスト2リスト2リスト2
+                            </li>
+                            <li class="p-shingle-list-item">
+                                リスト2リスト2リスト2
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="p-shingle-lists c-text-shingle-lists">
+                        <ol class="p-shingle-list">
+                            <li class="p-shingle-list-item">
+                                リストリストリスト
+                            </li>
+                            <li class="p-shingle-list-item">
+                                リストリストリスト
+                            </li>
+                        </ol>
+                    </div>
+                </div><!--.p-shingle-lists-section-->
             </main><!--.u-grid__main-->
         
             <footer class="l-footer">
@@ -129,20 +214,20 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="script.js"></script>
     </body>
-    
+
     <article class="l-sidebar">
         <div class="l-sidebar__section">
             <div class="c-sidebar__button--close">
                 <img src="img/close.png" alt="">
             </div>
-            <h2 class="c-sidebar--title">Menu</h2>
+            <h2 class="c-title--sidebar">Menu</h2>
             <div class="l-sidebar__content">
-                <ul class="l-sidebar-main">
-                    <ul class="l-sidebar__lists">
+                <ul class="l-sidebar-lists">
+                    <ul class="l-sidebar__lists--burger">
                         <li>
-                            <h3 class="c-title--sidebar">バーガー</h3>
+                            <h3 class="c-title--sidebar--main-menu">バーガー</h3>
                         </li>
-                        <ul class="l-sidebar-submenu">
+                        <ul class="c-text-sidebar--sub-menu">
                             <li>ハンバーガー</li>
                             <a href="archive.html"><li>チーズバーガー</li></a>
                             <li>テリヤキバーガー</li>
@@ -152,22 +237,22 @@
                             <li>チキンバーガー</li>
                         </ul>
                     </ul><!--.l-sidebar__lists-->
-                    <ul class="l-sidebar__lists">
+                    <ul class="l-sidebar__lists--side-menu">
                         <li>
-                            <h3 class="c-title--sidebar">サイド</h3>
+                            <h3 class="c-title--sidebar--main-menu">サイド</h3>
                         </li>
-                        <ul class="l-sidebar-submenu">
+                        <ul class="c-text-sidebar--sub-menu">
                             <li>ポテト</li>
                             <li>サラダ</li>
                             <li>ナゲット</li>
                             <li>コーン</li>
                         </ul>
                     </ul><!--.l-sidebar__lists-->
-                    <ul class="l-sidebar__lists">
+                    <ul class="l-sidebar__lists--drink">
                         <li>
-                            <h3 class="c-title--sidebar">ドリンク</h3>
+                            <h3 class="c-title--sidebar--main-menu">ドリンク</h3>
                         </li>
-                        <ul class="l-sidebar-submenu">
+                        <ul class="c-text-sidebar--sub-menu">
                             <li>コーラー</li>
                             <li>ファンタ</li>
                             <li>オレンジ</li>

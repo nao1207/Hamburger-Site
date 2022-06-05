@@ -42,3 +42,26 @@ object > component > text
     font-size: 1.6rem;
     line-height: 23px;
 }
+
+/*-----shingle-pageテキスト-----*/
+.c-text-blockquote {
+    color: $text-item;
+    font-size: 1.6rem;
+}
+
+.c-text-blockquote__reference-source {
+    font-size: 1.6rem;
+    color: $text-item;
+}
+
+.c-text--shingle-section {
+    font-size: 1.6rem;
+    color: $text-item;
+    text-indent: 1.6rem;
+    line-height: 2.5rem;
+}
+
+.c-text-shingle-lists {
+    color: $text-item;
+    font-size: 1.6rem;
+}

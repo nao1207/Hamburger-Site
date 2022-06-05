@@ -35,7 +35,7 @@ component > _title.scss
     font-size: 3.6rem;
     font-weight: bold;
 }
-
+/*
 .c-title {
     color: $title-contents;
 }
@@ -44,6 +44,7 @@ component > _title.scss
     color: $title-item;
     line-height: 50px;
 }
+*/
 .c-title--underline {
     color: $title-contents;
     font-size: 4.1rem;
@@ -181,4 +182,35 @@ component > _title.scss
             left: 230px;
         }
     }
+}
+
+/*-----shingle-page-----*/
+.c-title2--description {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: $title-description;
+}
+
+.c-title3--description {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: $title-description;
+}
+
+.c-title4--description {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $title-description;
+}
+
+.c-title5--description {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $title-description;
+}
+
+.c-title6--description {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $title-description;
 }
