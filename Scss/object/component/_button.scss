@@ -21,6 +21,9 @@ button {
     a {
         color: $text-item;
     }
+    @include breakpoint(tablet) {
+        max-width: 50%;
+    }
 }
 
 .c-button--sidebar {

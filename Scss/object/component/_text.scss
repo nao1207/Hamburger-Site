@@ -66,6 +66,13 @@ object > component > text
     font-size: 1.6rem;
 }
 
+/*-----tag-----*/
+.c-text--tag {
+    color: $text-item;
+    font-size: 1.6rem;
+    background-color: $background-tag;
+}
+
 /*-----table-----*/
 .c-text-table {
     font-size: 1.6rem;

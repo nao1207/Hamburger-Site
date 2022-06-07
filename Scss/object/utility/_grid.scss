@@ -19,8 +19,16 @@
     }
 }
 
-/*
-.u-grid__shingle {
-    padding: 0 20px;
+
+.u-grid--shingle {
+    .p-shingle--insertion-image__items {
+        @include breakpoint(tablet) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1vw;
+        }
+        @include breakpoint(pc) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
 }
-*/

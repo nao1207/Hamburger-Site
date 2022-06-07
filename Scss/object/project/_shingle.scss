@@ -2,8 +2,11 @@
 
 .p-shingle__main-visual {
     margin-bottom: 30px;
-    .c-main-bg {
+    .c-main-bg--shingle {
         position: relative;
+        @include breakpoint(tablet) {
+            max-height: 500px;
+        }
     }
     .c-title--main-visual {
         position: absolute;
@@ -37,12 +40,32 @@
         height: 176px;
         margin-bottom: 30px;
         gap: 10px;
+        max-width: 100%;
+        @include breakpoint(tablet) {
+            height: 373px;
+        }
         img {
-            width: 144px;
-            height: 50%;
+            width: 40%;
+            height: 55%;
+            object-fit: cover;
+            @include breakpoint(tablet) {
+                width: 42%;
+            }
+            @include breakpoint(pc) {
+                height: 100%;
+            }
         }
         p {
             overflow-y: hidden;
+            width: 60%;
+            @include breakpoint(tablet) {
+                width: 58%;
+            }
+        }
+    }
+    .p-shingle-content:not(:last-child) {
+        @include breakpoint(tablet) {
+            margin-bottom: 117px;
         }
     }
     .p-shingle-content:nth-child(even) {
@@ -57,16 +80,30 @@
         object-fit: cover;
         display: flex;
         margin: 0 auto 30px auto;
+        @include breakpoint(tablet) {
+            margin-bottom: 60px;
+            width: 80%;
+            height: 100%;
+        }
     }
 }
 
 .p-shingle--insertion-image--big {
     img {
-        margin: 0 auto 30px auto;
+        margin: 0 auto 1.5vh auto;
         object-fit: cover;
         height: 205px;
         width: 100%;
         object-position: 100% 100%;
+        &:last-child {
+            margin-bottom: 30px;
+            @include breakpoint(tablet) {
+                margin-bottom: 60px;
+            }
+        }
+        @include breakpoint(tablet) {
+            margin: 0 auto 1vh auto;
+        }
     }
 }
 
@@ -83,6 +120,15 @@
     }
 }
 
+/*-----tag-----*/
+.p-shingle__tag {
+    margin-bottom: 30px;
+    padding-top: 50px;
+    padding-left: 0;
+    @include breakpoint(tablet) {
+        margin-bottom: 60px;
+    }
+}
 /*-----table-----*/
 .p-shingle-table {
     margin-bottom: 30px;
