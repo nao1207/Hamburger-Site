@@ -6,6 +6,7 @@
 /*-----タイトル-----*/
 /*-----テキスト-----*/
 /*-----ボタン-----*/
+/*-----カラー-----*/
 /*------------------------------
 タイトルタグ大きさ指定
 ------------------------------*/
@@ -314,7 +315,12 @@ component > _background.scss
   width: 100%;
   height: 124px;
   object-fit: cover;
-  object-position: 0 95%;
+  object-position: 0 98%;
+}
+@media (min-width: 600px) {
+  .c-shingle__big-img img {
+    height: 264px;
+  }
 }
 
 button {
@@ -326,6 +332,16 @@ button a {
   color: #707070;
   font-size: 1.6rem;
   font-weight: 700;
+}
+
+.c-shingle-button {
+  background-color: #F2EDE9;
+  border: solid 1px;
+  border-radius: 20px;
+  height: 81px;
+}
+.c-shingle-button a {
+  color: #3C2A10;
 }
 
 .c-button--sidebar {
@@ -445,6 +461,12 @@ object > component > text
 .c-text-shingle-lists {
   color: #3C2A10;
   font-size: 1.6rem;
+}
+
+/*-----table-----*/
+.c-text-table {
+  font-size: 1.6rem;
+  color: #3C2A10;
 }
 
 /*------------------------------
@@ -679,6 +701,13 @@ component > _title.scss
   color: #3C2A10;
 }
 
+/*---table-----*/
+.c-title-table {
+  font-size: 1.6rem;
+  color: #3C2A10;
+  font-weight: 400;
+}
+
 .p-access {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.29) 50%), url("../../../mainvisual-img/map.png");
   background-size: cover;
@@ -760,12 +789,14 @@ component > _title.scss
 }
 @media (min-width: 600px) {
   .p-main-visual--archive .c-title--textline__bg {
-    margin-left: 66px;
+    margin-left: 40px;
+    top: 35%;
   }
 }
 @media (min-width: 1025px) {
   .p-main-visual--archive .c-title--textline__bg {
-    margin-left: 86px;
+    margin-left: 10px;
+    top: 35%;
   }
 }
 
@@ -984,6 +1015,16 @@ component > _title.scss
 .p-description-blockquote {
   background-color: #F5F5F5;
 }
+@media (min-width: 600px) {
+  .p-description-blockquote {
+    padding: 50px;
+  }
+}
+@media (min-width: 600px) {
+  .p-description-blockquote__reference-source {
+    padding-bottom: 50px;
+  }
+}
 
 .p-main-visual {
   background-image: url("../../mainvisual-img/mainvisual-sp@2x.jpg");
@@ -1140,6 +1181,41 @@ component > _title.scss
 }
 .p-shingle-lists:last-child {
   margin-bottom: 60px;
+}
+
+/*-----table-----*/
+.p-shingle-table {
+  margin-bottom: 30px;
+}
+.p-shingle-table-item tr {
+  width: 100vw;
+}
+.p-shingle-table-item tr th {
+  width: 40vw;
+  padding: 1.6rem;
+}
+.p-shingle-table-item tr td {
+  width: 60vw;
+  padding: 1.6rem;
+}
+.p-shingle-table .p-shingle-table-item {
+  border-collapse: collapse;
+  border-color: #707070;
+}
+
+.p-shingle-button {
+  margin-bottom: 30px;
+}
+.p-shingle-button .c-shingle-button {
+  width: 88%;
+}
+
+.p-shingle-text-bold {
+  margin-bottom: 177px;
+}
+.p-shingle-text-bold p {
+  font-weight: 700;
+  font-size: 1.6rem;
 }
 
 .u-grid {

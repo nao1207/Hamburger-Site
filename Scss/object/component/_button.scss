@@ -13,6 +13,16 @@ button {
     }
 }
 
+.c-shingle-button {
+    background-color: $background-button;
+    border: solid 1px ;
+    border-radius: 20px;
+    height: 81px;
+    a {
+        color: $text-item;
+    }
+}
+
 .c-button--sidebar {
     color: $title-sidebar;
     font-size: 2rem;

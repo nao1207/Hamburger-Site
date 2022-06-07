@@ -75,6 +75,9 @@ component > _background.scss
         width: 100%;
         height: 124px;
         object-fit: cover;
-        object-position: 0 95%;
+        object-position: 0 98%;
+        @include breakpoint(tablet) {
+            height: 264px;
+        }
     }
 }

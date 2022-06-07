@@ -9,10 +9,12 @@
         position: absolute;
         top: 33%;
         @include breakpoint(tablet) {
-            margin-left: 66px;
+            margin-left: 40px;
+            top: 35%;
         }
         @include breakpoint(pc) {
-            margin-left: 86px;
+            margin-left: 10px;
+            top: 35%;
         }
     }
 }

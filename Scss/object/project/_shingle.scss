@@ -82,3 +82,40 @@
         margin-bottom: 60px;
     }
 }
+
+/*-----table-----*/
+.p-shingle-table {
+    margin-bottom: 30px;
+    &-item {
+        tr {
+            width: 100vw;
+            th {
+                width: 40vw;
+                padding: 1.6rem;
+            }
+            td {
+                width: 60vw;
+                padding: 1.6rem;
+            }
+        }
+    }
+    .p-shingle-table-item {
+        border-collapse:collapse;
+        border-color: $color-gray;
+    }
+}
+
+.p-shingle-button {
+    margin-bottom: 30px;
+    .c-shingle-button {
+        width: 88%;
+    }
+}
+
+.p-shingle-text-bold {
+    margin-bottom: 177px;
+    p {
+        font-weight: 700;
+        font-size: 1.6rem;
+    }
+}
