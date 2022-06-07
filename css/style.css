@@ -626,9 +626,14 @@ component > _title.scss
 }
 
 .c-title--archive__card {
-  color: #fff;
   font-size: 2rem;
-  font-weight: 700;
+  color: #fff;
+}
+@media (min-width: 1025px) {
+  .c-title--archive__card {
+    font-size: 3.6rem;
+    font-weight: 700;
+  }
 }
 
 .c-sub-title--archive__card {
@@ -768,12 +773,13 @@ component > _title.scss
 }
 @media (min-width: 600px) {
   .p-main-visual--archive-search .c-title--textline__bg--search {
-    margin-left: 66px;
+    margin-left: 40px;
+    top: 35%;
   }
 }
 @media (min-width: 1025px) {
   .p-main-visual--archive-search .c-title--textline__bg--search {
-    margin-left: 86px;
+    margin-left: 10px;
   }
 }
 
@@ -796,7 +802,6 @@ component > _title.scss
 @media (min-width: 1025px) {
   .p-main-visual--archive .c-title--textline__bg {
     margin-left: 10px;
-    top: 35%;
   }
 }
 
@@ -884,6 +889,11 @@ component > _title.scss
 }
 .p-archive__item-text .c-title--archive__card {
   margin-bottom: 24px;
+}
+@media (min-width: 1025px) {
+  .p-archive__item-text .c-title--archive__card {
+    margin-bottom: 47px;
+  }
 }
 .p-archive__item-text .c-sub-title--archive__card {
   margin-bottom: 10px;

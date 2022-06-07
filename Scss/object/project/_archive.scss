@@ -14,7 +14,7 @@
         }
         @include breakpoint(pc) {
             margin-left: 10px;
-            top: 35%;
+
         }
     }
 }
@@ -88,6 +88,9 @@
         }
         .c-title--archive__card {
             margin-bottom: 24px;
+            @include breakpoint(pc) {
+                margin-bottom: 47px;
+            }
         }
         .c-sub-title--archive__card {
             margin-bottom: 10px;

@@ -144,9 +144,12 @@ component > _title.scss
 }
 
 .c-title--archive__card {
-    color: $title-section;
     font-size: 2rem;
-    font-weight: 700;
+    color: $title-section;
+    @include breakpoint(pc) {
+        font-size: 3.6rem;
+        font-weight: 700;
+    }
 }
 
 .c-sub-title--archive__card {
