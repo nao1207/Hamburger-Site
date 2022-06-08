@@ -23,6 +23,9 @@ layout > _footer.scss
         li {
         font-size: 2rem;
         font-weight: 400;
+        a {
+            color: inherit;
+        }
         }
         & > li:first-child {
             position: relative;

@@ -14,7 +14,7 @@ button {
 }
 
 .c-shingle-button {
-    background-color: $background-button;
+    background: linear-gradient($button-gradation-light, $button-gradation-dark);
     border: solid 1px ;
     border-radius: 20px;
     height: 81px;

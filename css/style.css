@@ -29,7 +29,7 @@ html {
   font-weight: 400;
 }
 
-li {
+ul {
   list-style: none;
 }
 
@@ -74,6 +74,9 @@ layout > _footer.scss
 .l-footer__menu li {
   font-size: 2rem;
   font-weight: 400;
+}
+.l-footer__menu li a {
+  color: inherit;
 }
 .l-footer__menu > li:first-child {
   position: relative;
@@ -322,6 +325,11 @@ component > _background.scss
     height: 264px;
   }
 }
+@media (min-width: 1025px) {
+  .c-shingle__big-img img {
+    height: 500px;
+  }
+}
 
 button {
   background-color: #fff;
@@ -335,7 +343,7 @@ button a {
 }
 
 .c-shingle-button {
-  background-color: #F2EDE9;
+  background: linear-gradient(#F2EDE9, #DED8D3);
   border: solid 1px;
   border-radius: 20px;
   height: 81px;
@@ -409,6 +417,10 @@ button a {
   }
 }
 
+ol {
+  list-style-type: decimal;
+}
+
 /*------------------------------
 object > component > text
 ------------------------------*/
@@ -463,7 +475,8 @@ object > component > text
   line-height: 2.5rem;
 }
 
-.c-text-shingle-lists {
+/*-----List-----*/
+.c-text-list {
   color: #3C2A10;
   font-size: 1.6rem;
 }
@@ -472,7 +485,6 @@ object > component > text
 .c-text--tag {
   color: #3C2A10;
   font-size: 1.6rem;
-  background-color: #F5F5F5;
 }
 
 /*-----table-----*/
@@ -1148,14 +1160,30 @@ component > _title.scss
   margin-left: 3.6rem;
 }
 
+/*-----引用ブロック-----*/
 .p-description-blockquote {
   margin-bottom: 30px;
+}
+@media (min-width: 600px) {
+  .p-description-blockquote {
+    margin-bottom: 60px;
+  }
 }
 .p-description-blockquote .c-text-blockquote {
   padding: 2rem;
 }
 .p-description-blockquote .c-text-blockquote__reference-source {
-  padding-top: 2rem;
+  padding-top: 5%;
+}
+@media (min-width: 600px) {
+  .p-description-blockquote .c-text-blockquote__reference-source {
+    padding-top: 13%;
+  }
+}
+@media (min-width: 1025px) {
+  .p-description-blockquote .c-text-blockquote__reference-source {
+    padding-top: 5%;
+  }
 }
 .p-description-blockquote a {
   text-decoration: underline;
@@ -1165,7 +1193,13 @@ component > _title.scss
 .c-shingle__big-img img {
   margin-bottom: 30px;
 }
+@media (min-width: 600px) {
+  .c-shingle__big-img img {
+    margin-bottom: 60px;
+  }
+}
 
+/*-----写真とテキスト-----*/
 .p-shingle-section .p-shingle-content {
   display: flex;
   height: 176px;
@@ -1186,6 +1220,7 @@ component > _title.scss
 @media (min-width: 600px) {
   .p-shingle-section .p-shingle-content img {
     width: 42%;
+    height: 189px;
   }
 }
 @media (min-width: 1025px) {
@@ -1207,6 +1242,16 @@ component > _title.scss
     margin-bottom: 117px;
   }
 }
+@media (min-width: 1025px) {
+  .p-shingle-section .p-shingle-content:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: 600px) {
+  .p-shingle-section .p-shingle-content:last-child {
+    margin-bottom: 61px;
+  }
+}
 .p-shingle-section .p-shingle-content:nth-child(even) {
   flex-direction: row-reverse;
 }
@@ -1220,9 +1265,16 @@ component > _title.scss
 }
 @media (min-width: 600px) {
   .p-shingle--insertion-image--small img {
-    margin-bottom: 60px;
+    margin-bottom: 241px;
     width: 80%;
     height: 100%;
+  }
+}
+@media (min-width: 1025px) {
+  .p-shingle--insertion-image--small img {
+    margin-bottom: 60px;
+    height: 358px;
+    width: auto;
   }
 }
 
@@ -1244,29 +1296,70 @@ component > _title.scss
 @media (min-width: 600px) {
   .p-shingle--insertion-image--big img {
     margin: 0 auto 1vh auto;
+    height: 205px;
+  }
+}
+@media (min-width: 1025px) {
+  .p-shingle--insertion-image--big img {
+    height: 257px;
   }
 }
 
-.p-shingle-lists-section .p-shingle-lists:nth-child(even) {
-  text-indent: 1.6rem;
+/*-----番号付きList-----*/
+.p-shingle__lists--numbering {
+  margin-bottom: 60px;
 }
 
-.p-shingle-lists {
+.c-list-numbering__first li:last-child {
   margin-bottom: 20px;
 }
-.p-shingle-lists:last-child {
-  margin-bottom: 60px;
+
+.c-list-numbering__first__item2 {
+  margin-bottom: 20px;
+}
+
+.c-list-numbering {
+  margin-bottom: 20px;
+}
+.c-list-numbering .c-list-numbering {
+  margin-bottom: 20px;
+}
+
+/*-----番号無しList-----*/
+.p-shingle__lists--no-numbering {
+  margin-bottom: 30px;
+}
+@media (min-width: 600px) {
+  .p-shingle__lists--no-numbering {
+    margin-bottom: 60px;
+  }
+}
+
+.c-list--no-numbering__first__item2 {
+  margin-bottom: 20px;
+}
+
+.c-list--no-numbering__second {
+  margin-bottom: 20px;
 }
 
 /*-----tag-----*/
 .p-shingle__tag {
   margin-bottom: 30px;
+}
+.p-shingle__tag p {
+  background-color: #F5F5F5;
   padding-top: 50px;
-  padding-left: 0;
+  padding-bottom: 50px;
 }
 @media (min-width: 600px) {
   .p-shingle__tag {
     margin-bottom: 60px;
+  }
+}
+@media (min-width: 1025px) {
+  .p-shingle__tag {
+    padding-bottom: 50px;
   }
 }
 
@@ -1274,24 +1367,37 @@ component > _title.scss
 .p-shingle-table {
   margin-bottom: 30px;
 }
+@media (min-width: 600px) {
+  .p-shingle-table {
+    margin-bottom: 60px;
+  }
+}
 .p-shingle-table-item tr {
   width: 100vw;
 }
 .p-shingle-table-item tr th {
   width: 40vw;
   padding: 1.6rem;
+  text-align: left;
 }
 .p-shingle-table-item tr td {
   width: 60vw;
   padding: 1.6rem;
+  text-align: left;
 }
 .p-shingle-table .p-shingle-table-item {
   border-collapse: collapse;
   border-color: #707070;
 }
 
+/*-----ボタン-----*/
 .p-shingle-button {
   margin-bottom: 30px;
+}
+@media (min-width: 600px) {
+  .p-shingle-button {
+    margin-bottom: 60px;
+  }
 }
 .p-shingle-button .c-shingle-button {
   width: 88%;
@@ -1299,6 +1405,11 @@ component > _title.scss
 
 .p-shingle-text-bold {
   margin-bottom: 177px;
+}
+@media (min-width: 600px) {
+  .p-shingle-text-bold {
+    margin-bottom: 228px;
+  }
 }
 .p-shingle-text-bold p {
   font-weight: 700;

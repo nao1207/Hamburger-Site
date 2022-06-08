@@ -61,7 +61,8 @@ object > component > text
     line-height: 2.5rem;
 }
 
-.c-text-shingle-lists {
+/*-----List-----*/
+.c-text-list {
     color: $text-item;
     font-size: 1.6rem;
 }
@@ -70,7 +71,6 @@ object > component > text
 .c-text--tag {
     color: $text-item;
     font-size: 1.6rem;
-    background-color: $background-tag;
 }
 
 /*-----table-----*/

@@ -14,13 +14,23 @@
     }
 }
 
+/*-----引用ブロック-----*/
 .p-description-blockquote {
     margin-bottom: 30px;
+    @include breakpoint(tablet) {
+        margin-bottom: 60px;
+    }
     .c-text-blockquote {
         padding: 2rem;
     }
     .c-text-blockquote__reference-source {
-        padding-top: 2rem;
+        padding-top: 5%;
+        @include breakpoint(tablet) {
+            padding-top: 13%;
+        }
+        @include breakpoint(pc) {
+            padding-top: 5%;
+        }
     }
     a {
         text-decoration: underline;
@@ -31,9 +41,13 @@
 .c-shingle__big-img {
     img {
         margin-bottom: 30px;
+        @include breakpoint(tablet) {
+            margin-bottom: 60px;
+        }
     }
 }
 
+/*-----写真とテキスト-----*/
 .p-shingle-section {
     .p-shingle-content {
         display: flex;
@@ -50,6 +64,7 @@
             object-fit: cover;
             @include breakpoint(tablet) {
                 width: 42%;
+                height: 189px;
             }
             @include breakpoint(pc) {
                 height: 100%;
@@ -67,6 +82,14 @@
         @include breakpoint(tablet) {
             margin-bottom: 117px;
         }
+        @include breakpoint(pc) {
+            margin-bottom: 60px;
+        }
+    }
+    .p-shingle-content:last-child {
+        @include breakpoint(tablet) {
+            margin-bottom: 61px;
+        }
     }
     .p-shingle-content:nth-child(even) {
         flex-direction: row-reverse;
@@ -81,9 +104,14 @@
         display: flex;
         margin: 0 auto 30px auto;
         @include breakpoint(tablet) {
-            margin-bottom: 60px;
+            margin-bottom: 241px;
             width: 80%;
             height: 100%;
+        }
+        @include breakpoint(pc) {
+            margin-bottom: 60px;
+            height: 358px;
+            width: auto;
         }
     }
 }
@@ -103,45 +131,83 @@
         }
         @include breakpoint(tablet) {
             margin: 0 auto 1vh auto;
+            height: 205px;
+        }
+        @include breakpoint(pc) {
+            height: 257px;
         }
     }
 }
 
-.p-shingle-lists-section {
-    .p-shingle-lists:nth-child(even) {
-        text-indent: 1.6rem;
+/*-----番号付きList-----*/
+.p-shingle__lists--numbering {
+    margin-bottom: 60px;
+}
+.c-list-numbering__first {
+    & li:last-child {
+        margin-bottom: 20px;
+    }
+}
+.c-list-numbering__first__item2 {
+    margin-bottom: 20px;
+}
+
+.c-list-numbering {
+    margin-bottom: 20px;
+    .c-list-numbering {
+        margin-bottom: 20px;
     }
 }
 
-.p-shingle-lists {
-    margin-bottom: 20px;
-    &:last-child {
+/*-----番号無しList-----*/
+.p-shingle__lists--no-numbering {
+    margin-bottom: 30px;
+    @include breakpoint(tablet) {
         margin-bottom: 60px;
     }
+}
+.c-list--no-numbering__first {
+    &__item2 {
+        margin-bottom: 20px;
+    }
+}
+.c-list--no-numbering__second {
+    margin-bottom: 20px;
 }
 
 /*-----tag-----*/
 .p-shingle__tag {
     margin-bottom: 30px;
-    padding-top: 50px;
-    padding-left: 0;
+    p {
+        background-color: $background-tag;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
     @include breakpoint(tablet) {
         margin-bottom: 60px;
+    }
+    @include breakpoint(pc) {
+        padding-bottom: 50px;
     }
 }
 /*-----table-----*/
 .p-shingle-table {
     margin-bottom: 30px;
+    @include breakpoint(tablet) {
+        margin-bottom: 60px;
+    }
     &-item {
         tr {
             width: 100vw;
             th {
                 width: 40vw;
                 padding: 1.6rem;
+                text-align: left;
             }
             td {
                 width: 60vw;
                 padding: 1.6rem;
+                text-align: left;
             }
         }
     }
@@ -151,8 +217,12 @@
     }
 }
 
+/*-----ボタン-----*/
 .p-shingle-button {
     margin-bottom: 30px;
+    @include breakpoint(tablet) {
+        margin-bottom: 60px;
+    }
     .c-shingle-button {
         width: 88%;
     }
@@ -160,6 +230,9 @@
 
 .p-shingle-text-bold {
     margin-bottom: 177px;
+    @include breakpoint(tablet) {
+        margin-bottom: 228px;
+    }
     p {
         font-weight: 700;
         font-size: 1.6rem;

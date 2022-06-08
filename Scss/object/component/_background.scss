@@ -79,5 +79,8 @@ component > _background.scss
         @include breakpoint(tablet) {
             height: 264px;
         }
+        @include breakpoint(pc) {
+            height: 500px;
+        }
     }
 }
