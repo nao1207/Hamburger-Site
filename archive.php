@@ -130,7 +130,7 @@
                         </li>
                         <ul class="c-text-sidebar--sub-menu">
                             <li>ハンバーガー</li>
-                            <a href="archive.html"><li>チーズバーガー</li></a>
+                            <a href="archive.php"><li>チーズバーガー</li></a>
                             <li>テリヤキバーガー</li>
                             <li>アボカドバーガー</li>
                             <li>フィッシュバーガー</li>
