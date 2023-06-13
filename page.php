@@ -2,7 +2,7 @@
 
             <main class="u-grid__main">
                 <div class="p-shingle__main-visual c-main-visual u-grid__shingle">
-                    <img class="c-main-bg--shingle" src="mainvisual-img/page-title_shop@2x.jpg" alt="">
+                    <img class="c-main-bg--shingle" src="mainvisual-img/page-title_shop@2x.jpg" alt="ショップ写真">
                     <h1 class="c-title--main-visual">ショップについて</h1>
                 </div><!--.p-main-visual-->
 

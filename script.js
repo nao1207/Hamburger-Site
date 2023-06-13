@@ -1,4 +1,5 @@
-$(function(){
+//$(function(){
+jQuery(function($){
     $('.c-button--sidebar').click(function(){
         $('.l-sidebar').addClass('open');
         $('.main-watermark_bg').addClass('open');

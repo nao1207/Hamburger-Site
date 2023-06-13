@@ -34,16 +34,24 @@
         }
         add_action( 'wp_enqueue_scripts', 'theme_name_files' );
 
-        // function custom_print_scripts() {
-        //     if (!is_admin()) {
-        //         //デフォルトjquery削除
-        //         wp_deregister_script('jquery');
+        function custom_print_scripts() {
+            if (!is_admin()) {
+                 //デフォルトjquery削除
+                wp_deregister_script('jquery');
         
-        //         //GoogleCDNから読み込む
-        //         wp_enqueue_script('jquery-js', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' );
-        //     }
-        // }
-        // add_action('wp_print_scripts', 'custom_print_scripts');
+                 //GoogleCDNから読み込む
+                wp_enqueue_script('jquery-js', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' );
+            }
+        }
+        add_action('wp_print_scripts', 'custom_print_scripts');
+
+
+        add_filter( 'wp_default_scripts', 'dequeue_jquery_migrate' );
+        function dequeue_jquery_migrate( $scripts){
+            if(!is_admin()){
+                $scripts->remove( 'jquery');
+            }
+        }
 
     //ウィジェット
     function hamburger_widgets_init() {

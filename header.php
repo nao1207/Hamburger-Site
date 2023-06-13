@@ -4,6 +4,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php
+        wp_deregister_script('jquery');
+        wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), '3.6.0');
+        ?>
+        <?php wp_enqueue_script('jQueryプラグインファイル', '/wp-content/themes/Hamburger/js/jQueryプラグインファイル'); ?>
         <?php wp_head(); ?>
     </head>
 
