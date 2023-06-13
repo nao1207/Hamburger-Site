@@ -3,17 +3,17 @@
 @use "../../foundation/variable" as *;
 
 .p-access {
-        background: linear-gradient(180deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.29),rgba(0,0,0,0.29) 50%),url("../../../mainvisual-img/map.png");
+        background: linear-gradient(180deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.29),rgba(0,0,0,0.29) 50%),url("../mainvisual-img/map.png");
         background-size: cover;;
         width: 100%;
         max-height: auto;
         background-position: center;
         background-size:cover;
         @include breakpoint(tablet) {
-            background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6) 100%),url("../../../mainvisual-img/map.png");
+            background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6) 100%),url("../mainvisual-img/map.png");
         }
         @include breakpoint(pc) {
-            background: linear-gradient(rgba(0,0,0,0.29),rgba(0,0,0,0.29) 100%),url("../../../mainvisual-img/map.png");
+            background: linear-gradient(rgba(0,0,0,0.29),rgba(0,0,0,0.29) 100%),url("../mainvisual-img/map.png");
         }
     &__text {
         display: flex;

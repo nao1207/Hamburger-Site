@@ -60,7 +60,7 @@ layout > _footer.scss
   height: 150px;
   width: 100%;
   background-size: cover;
-  background-image: url("../../mainvisual-img/footer.png");
+  background-image: url("../mainvisual-img/footer.png");
 }
 .l-footer__menu {
   display: flex;
@@ -252,7 +252,7 @@ component > _background.scss
 ------------------------------*/
 /*----- メインビジュアル -----*/
 .c-main-visual__background-img {
-  background-image: url("../../../mainvisual-img/mainvisual-sp@2x.jpg");
+  background-image: url("../mainvisual-img/mainvisual-sp@2x.jpg");
   width: 100%;
   height: 285px;
   display: flex;
@@ -741,7 +741,7 @@ component > _title.scss
 }
 
 .p-access {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.29) 50%), url("../../../mainvisual-img/map.png");
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.29) 50%), url("../mainvisual-img/map.png");
   background-size: cover;
   width: 100%;
   max-height: auto;
@@ -750,12 +750,12 @@ component > _title.scss
 }
 @media (min-width: 600px) {
   .p-access {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) 100%), url("../../../mainvisual-img/map.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) 100%), url("../mainvisual-img/map.png");
   }
 }
 @media (min-width: 1025px) {
   .p-access {
-    background: linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.29) 100%), url("../../../mainvisual-img/map.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.29) 100%), url("../mainvisual-img/map.png");
   }
 }
 .p-access__text {
@@ -959,7 +959,7 @@ component > _title.scss
   flex-direction: column;
 }
 .p-branch-menu__takeout {
-  background-image: url("../../mainvisual-img/page-title_archive.png");
+  background-image: url("../mainvisual-img/page-title_archive.png");
   width: 100%;
   max-height: auto;
   margin-bottom: 20px;
@@ -983,7 +983,7 @@ component > _title.scss
   margin-bottom: 3px;
 }
 .p-branch-menu__eatin {
-  background-image: url("../../mainvisual-img/eatin.png");
+  background-image: url("../mainvisual-img/eatin.png");
   width: 100%;
   max-height: auto;
   margin-bottom: 20px;
@@ -1065,7 +1065,7 @@ component > _title.scss
 }
 
 .p-main-visual {
-  background-image: url("../../mainvisual-img/mainvisual-sp@2x.jpg");
+  background-image: url("../mainvisual-img/mainvisual-sp@2x.jpg");
   width: 100vw;
   height: 285px;
   display: flex;
@@ -1089,13 +1089,13 @@ component > _title.scss
 }
 @media (min-width: 600px) {
   .p-main-visual {
-    background-image: url("../../mainvisual-img/mainvisual-pc@2x.jpg");
+    background-image: url("../mainvisual-img/mainvisual-pc@2x.jpg");
     height: 285px;
   }
 }
 @media (min-width: 1025px) {
   .p-main-visual {
-    background-image: url("../../mainvisual-img/mainvisual-pc@2x.jpg");
+    background-image: url("../mainvisual-img/mainvisual-pc@2x.jpg");
     background-size: cover;
     width: 100%;
     height: 530px;
@@ -1110,7 +1110,7 @@ component > _title.scss
   content: "";
   width: 24px;
   height: 24px;
-  background: url("../../../img/search.png");
+  background: url("../img/search.png");
   display: inline-block;
   position: absolute;
   top: 14px;
