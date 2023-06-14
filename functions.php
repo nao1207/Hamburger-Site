@@ -25,46 +25,9 @@
         wp_enqueue_style('Hamburger', get_template_directory_uri().'/css/Hamburger.css', array(),'1.0.0');
         wp_enqueue_style('style', get_theme_file_uri('/css/style.css'),array(),'1.0.0');
         wp_enqueue_style('editor-style', get_theme_file_uri('/css/editor-style.css'),array(),'1.0.0');
-        //GitHubから引用
-        wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.4.1.min.js', '', '', true );
-        wp_enqueue_script( 'script', get_template_directory_uri(). '/js/script.js', 'jquery', '' , true );
+        wp_enqueue_script( 'script', get_theme_file_uri(). '/script.js', array('jquery'), '' , true );
     }
     add_action('wp_enqueue_scripts','Hamburger_script');
-
-    //jQuery読み込み
-    add_action( 'wp_enqueue_scripts', 'wp_enqueue_my_scripts_custom' );
-        if ( !function_exists( 'wp_enqueue_my_scripts_custom' ) ):
-        function wp_enqueue_my_scripts_custom() {
-            if (is_singular()) {
-                wp_enqueue_script( 'my-js',  get_theme_file_uri('/js/script.js'), array('jquery'), false, true  );
-            }
-    }
-    endif;
-
-    function theme_name_files() {
-        //jQuery読み込み
-        wp_enqueue_script('jquery');
-        }
-        add_action( 'wp_enqueue_scripts', 'theme_name_files' );
-
-        function custom_print_scripts() {
-            if (!is_admin()) {
-                 //デフォルトjquery削除
-                wp_deregister_script('jquery');
-        
-                 //GoogleCDNから読み込む
-                wp_enqueue_script('jquery-js', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' );
-            }
-        }
-        add_action('wp_print_scripts', 'custom_print_scripts');
-
-
-        add_filter( 'wp_default_scripts', 'dequeue_jquery_migrate' );
-        function dequeue_jquery_migrate( $scripts){
-            if(!is_admin()){
-                $scripts->remove( 'jquery');
-            }
-        }
 
     //ウィジェット
     function hamburger_widgets_init() {

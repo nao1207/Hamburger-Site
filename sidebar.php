@@ -1,7 +1,7 @@
 <article class="l-sidebar">
         <div class="l-sidebar__section">
             <div class="c-sidebar__button--close">
-                <img src="img/close.png" alt="">
+                <img src="/img/close.png" alt="closeボタン">
             </div>
             <h2 class="c-title--sidebar">Menu</h2>
             <div class="l-sidebar__content">
@@ -19,7 +19,7 @@
                             <li>ベーコンバーガー</li>
                             <li>チキンバーガー</li>
                         </ul>
-                    </ul><!--.l-sidebar__lists-->
+                    </ul><!--/.l-sidebar__lists-->
                     <ul class="l-sidebar__lists--side-menu">
                         <li>
                             <h3 class="c-title--sidebar--main-menu">サイド</h3>
