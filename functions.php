@@ -25,33 +25,34 @@
         wp_enqueue_style('Hamburger', get_template_directory_uri().'/css/Hamburger.css', array(),'1.0.0');
         wp_enqueue_style('style', get_theme_file_uri('/css/style.css'),array(),'1.0.0');
         wp_enqueue_style('editor-style', get_theme_file_uri('/css/editor-style.css'),array(),'1.0.0');
+
     }
     add_action('wp_enqueue_scripts','Hamburger_script');
 
-    function theme_name_files() {
-        //jQuery読み込み
-        wp_enqueue_script('jquery');
-        }
-        add_action( 'wp_enqueue_scripts', 'theme_name_files' );
+    // function theme_name_files() {
+    //     //jQuery読み込み
+    //     wp_enqueue_script('jquery');
+    //     }
+    //     add_action( 'wp_enqueue_scripts', 'theme_name_files' );
 
-        function custom_print_scripts() {
-            if (!is_admin()) {
-                 //デフォルトjquery削除
-                wp_deregister_script('jquery');
+    //     function custom_print_scripts() {
+    //         if (!is_admin()) {
+    //              //デフォルトjquery削除
+    //             wp_deregister_script('jquery');
         
-                 //GoogleCDNから読み込む
-                wp_enqueue_script('jquery-js', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' );
-            }
-        }
-        add_action('wp_print_scripts', 'custom_print_scripts');
+    //              //GoogleCDNから読み込む
+    //             wp_enqueue_script('jquery-js', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' );
+    //         }
+    //     }
+    //     add_action('wp_print_scripts', 'custom_print_scripts');
 
 
-        add_filter( 'wp_default_scripts', 'dequeue_jquery_migrate' );
-        function dequeue_jquery_migrate( $scripts){
-            if(!is_admin()){
-                $scripts->remove( 'jquery');
-            }
-        }
+    //     add_filter( 'wp_default_scripts', 'dequeue_jquery_migrate' );
+    //     function dequeue_jquery_migrate( $scripts){
+    //         if(!is_admin()){
+    //             $scripts->remove( 'jquery');
+    //         }
+    //     }
 
     //ウィジェット
     function hamburger_widgets_init() {
