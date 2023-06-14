@@ -13,10 +13,12 @@
     })
 });
 
-$(window).on('load resize',function(){
-    if((window.matchMedia('(min-width: 1025px)').matches) && $('.main-watermark_bg').hasClass('open')){
-        $('.l-sidebar.open').removeClass('open');
-        $('.main-watermark_bg.open').removeClass('open');
-        $('body.open').removeClass('open');
-    }
+//サイドバー表示時にPC版になった時の動作
+jQuery(function($){
+    $(window).on('load resize',function(){
+        if((window.matchMedia('(min-width: 1025px)').matches) && $('.main-watermark_bg').hasClass('open')){
+            $('.l-sidebar.open').removeClass('open');
+            $('.main-watermark_bg.open').removeClass('open');
+            $('body.open').removeClass('open');
+        }})
 });
