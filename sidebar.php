@@ -1,7 +1,7 @@
 <article class="l-sidebar">
         <div class="l-sidebar__section">
             <div class="c-sidebar__button--close">
-                <img src="/img/close.png" alt="closeボタン">
+                <img src="../../img/close.png" alt="closeボタン">
             </div>
             <h2 class="c-title--sidebar">Menu</h2>
             <div class="l-sidebar__content">
