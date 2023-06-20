@@ -38,11 +38,16 @@ button {
 }
 
 .c-sidebar__button--close {
+    img {
+        //background-image: url("../img/close.png");
         cursor: pointer;
         position: absolute;
-        top: 25px;
+        //top: 25px;
+        top: 50px;
         right: 17px;
-        //background-image: url("../../img/close.png");
+        width: auto;
+        height: auto;
+    }
     @include breakpoint(pc) {
         display: none;
     }

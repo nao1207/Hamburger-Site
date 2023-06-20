@@ -373,11 +373,13 @@ button a {
   }
 }
 
-.c-sidebar__button--close {
+.c-sidebar__button--close img {
   cursor: pointer;
   position: absolute;
-  top: 25px;
+  top: 50px;
   right: 17px;
+  width: auto;
+  height: auto;
 }
 @media (min-width: 1025px) {
   .c-sidebar__button--close {

@@ -19,7 +19,7 @@
         overflow-y: auto;
         width: 100%;
         background-color: $background-sidebar;
-        position: relative;
+        //position: relative;
         @include breakpoint(pc) {
             .c-title--sidebar {
                 @include breakpoint(pc) {
