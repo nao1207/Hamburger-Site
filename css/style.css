@@ -373,7 +373,7 @@ button a {
   }
 }
 
-.c-sidebar__button--close img {
+.c-sidebar__button--close {
   cursor: pointer;
   position: absolute;
   top: 50px;

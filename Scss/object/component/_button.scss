@@ -26,6 +26,7 @@ button {
     }
 }
 
+//Menuボタン
 .c-button--sidebar {
     color: $title-sidebar;
     font-size: 2rem;
@@ -39,11 +40,10 @@ button {
 
 .c-sidebar__button--close {
     img {
-        //background-image: url("../img/close.png");
         cursor: pointer;
         position: absolute;
-        //top: 25px;
-        top: 50px;
+        top: 25px;
+        //top: 50px;
         right: 17px;
         width: auto;
         height: auto;

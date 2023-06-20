@@ -1,6 +1,6 @@
 //$(function(){
     //Menuボタンを押した時の処理
-    jQuery(function($){
+jQuery(function($){
     $('.c-button--sidebar').click(function(){
         $('.l-sidebar').addClass('open');
         $('.main-watermark_bg').addClass('open');
